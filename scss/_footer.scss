@@ -1,0 +1,71 @@
+@use "config/variables" as v;
+@use "mixin" as m;
+
+/*FOOTER
+---------------------------------------------------------------------------*/
+footer{
+    background: rgba(0, 0, 0, 0.6); 
+    
+    .footer__inner{
+         max-width: v.$header-width;
+         margin: 0 auto;
+         display: flex;	
+         align-items: center;
+        justify-content: space-between;
+        height: 176px;
+        padding: 10px;
+        
+        @include m.sp-size {
+            width: 100%;
+            flex-direction: column;
+            justify-content: inherit;
+        }
+    }
+    
+    .footer-logo__block{
+        text-align: center;
+    }
+    
+    .footer-logo{
+        width: 126px;
+        height: 45px;
+        
+        @include m.tablet-size {
+           
+        }
+        
+        a{
+            display: block;
+        }
+  
+        img{
+            width:100%;
+        }   
+    }
+    
+    .footer_copy{
+        font-family: "Raleway", sans-serif;
+    }
+    
+    .footer__menu{
+        display: flex;
+        
+        li{
+            padding: 3px 16px;
+
+            
+            @include m.sp-size {
+                padding:8px;
+               @include m.txt-md; 
+                margin-top: 20px;
+            }
+            
+            a{
+                color: v.$base-white-color;
+                text-decoration: none;
+            }
+        }
+            
+    }
+    
+}

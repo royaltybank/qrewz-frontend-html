@@ -1,0 +1,76 @@
+@use "config/variables" as v;
+
+/* MIXIN
+---------------------------------------------------------------------------*/
+
+
+@mixin pc-size{
+    @media screen and (min-width: (v.$device-tablet-size)) {
+        @content;
+    }
+}
+
+@mixin between-pc-sp-size{
+  
+    @media screen and (min-width: (v.$device-sp-size)) and (max-width:(v.$size-container)) {
+        @content;
+    }
+}
+
+
+
+
+@mixin tablet-size{
+    @media screen and (max-width: (v.$device-tablet-size)) {
+        @content;
+    }
+}
+
+@mixin sp-size{
+    @media screen and (max-width: (v.$device-sp-size)) {
+        @content;
+    }
+}
+
+
+
+
+
+//center//
+
+@mixin p-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+
+//typo//
+
+$lg-txt: 16px;
+$md-txt: 14px;
+$sm-txt: 12px;
+
+$lg-txt-height: 22px;
+$md-txt-height: 19px;
+$sm-txt-height: 15px;
+
+
+@mixin txt-lg{
+    font-size: $lg-txt;
+    line-height: $lg-txt-height;
+}
+
+@mixin txt-md{
+     font-size: $md-txt;
+    line-height: $md-txt-height;
+}
+
+@mixin txt-sm{
+    font-size: $sm-txt;
+    line-height: $sm-txt-height;
+}
+
+
+

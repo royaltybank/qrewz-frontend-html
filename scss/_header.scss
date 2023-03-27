@@ -1,0 +1,228 @@
+@use "config/variables" as v;
+@use "mixin" as m;
+
+/*header
+---------------------------------------------------------------------------*/
+header {
+     width:100%;
+    position: fixed;
+    z-index: 99;
+    height: v.$header-height;
+     background: linear-gradient(to top, rgba(255,255,255,0) 20%, rgba(0,0,0,0.9) 100%);
+    
+    .header__inner{
+        max-width: v.$header-width;
+        margin: 0 auto;
+            display: flex;				
+            align-items: center;		
+            justify-content: flex-end;	   
+             height: v.$header-height;
+            position: relative;
+        
+         @include m.tablet-size {
+            width: 100%;         
+       }
+     }
+    
+    .header-logo{
+        position: absolute;
+        width: 126px;
+        height: 45px;
+        left: 0;
+        @include m.tablet-size {
+             @include m.p-center;
+        }
+        
+        a{
+            display: block;
+        }
+        
+        
+        img{
+            width:100%;
+        }
+         
+    }
+}
+
+
+
+//////////////////////////////////////////
+/*menubarブロック基本設定
+---------------------------------------------------------------------------*/
+
+#menubar {
+    display: block;
+        
+         /*spの開閉用のスタイル*/
+        &.db {
+            display: block;
+        }
+
+        &.dn {
+            display: none;
+        }
+}
+
+//////////////////////////////////////////
+/*menubarブロックレスポンシブ
+---------------------------------------------------------------------------*/
+
+
+
+
+    #menubar {
+        
+        @include m.pc-size {
+            display: block;
+            
+            ul{
+                 display: flex;
+            }
+        
+            /*ハンバーガーメニューを非表示にする*/
+            #menubar_hdr {
+                display: none;
+            }
+      
+        }
+        @include m.tablet-size {
+        display: none;
+        &.db {
+            position: fixed;
+            overflow: auto;
+            z-index: 100;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            padding: 70px 0;
+            background: #000;
+        }
+        }
+    
+    }
+
+
+
+
+//////////////////////////////////////////
+/*メニューのデザイン
+---------------------------------------------------------------------------*/
+#menubar{
+    
+    .menubar__menu{
+     
+        li{
+            padding: 3px 16px;
+            font-family: "Raleway", sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            
+              
+            @include m.tablet-size {
+                padding: 30px 10px;
+                 font-size:20px;
+            }
+            
+            
+            
+             a{
+                color: v.$base-white-color;
+                 text-decoration: none;
+            }
+            
+            .menu-icon{
+                width:22px;
+                margin: 0 auto;
+            }
+            
+
+           
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/*３本バー（ハンバーガー）アイコン設定
+---------------------------------------------------------------------------*/
+@media screen and (max-width: v.$device-tablet-size) {
+    /*開閉用のスタイル*/
+    #menubar_hdr.db {
+        display: flex;
+    }
+
+    #menubar_hdr.dn {
+        display: none;
+    }
+
+    /*３本バーを囲むブロック*/
+    #menubar_hdr {
+        z-index: 101;
+        cursor: pointer;
+        padding: 16px 14px;
+        /*上下、左右への余白*/
+        width: 52px;
+        /*幅（３本バーが出ている場合の幅になります）*/
+        height: 52px;
+        /*高さ*/
+        display: flex;
+        /*flexボックスを使う指定*/
+        flex-direction: column;
+        /*子要素（３本バー）を縦並びにする*/
+        justify-content: space-between;
+        /*並びかたの種類の指定*/
+        order: 0;
+        /*表示させる順番。「#menubar_hdr」「#logo」「#header-icon」それぞれに指定しており、数字の「小さな順」に左から並びます。*/
+
+        /*バー１本あたりの設定*/
+        span {
+            display: block;
+            transition: 0.3s;
+            /*アニメーションにかける時間。0.3秒。*/
+            border-top: 2px solid #fff;
+            /*線の幅、線種、色*/
+        }
+    }
+
+
+    /*ハンバーガーメニュー挙動*/
+    #menubar_hdr.ham {
+
+        /*×印が出ている状態の設定。※１本目および２本目のバーの共通設定。*/
+        span:nth-of-type(1),
+        span:nth-of-type(3) {
+            transform-origin: center center;
+            /*変形の起点。センターに。*/
+            width: 26px;
+            /*バーの幅*/
+        }
+
+        /*×印が出ている状態の設定。※１本目のバー。*/
+        span:nth-of-type(1) {
+            transform: rotate(45deg) translate(6px, 7px);
+            /*回転45°と、X軸Y軸への移動距離の指定*/
+        }
+
+        /*×印が出ている状態の設定。※３本目のバー。*/
+        span:nth-of-type(3) {
+            transform: rotate(-45deg) translate(6px, -7px);
+            /*回転-45°と、X軸Y軸への移動距離の指定*/
+        }
+
+        /*×印が出ている状態の設定。※２本目のバー。*/
+        span:nth-of-type(2) {
+            display: none;
+            /*２本目は使わないので非表示にする*/
+        }
+
+    }
+
+}

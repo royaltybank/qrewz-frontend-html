@@ -1,0 +1,140 @@
+
+@use "config/variables" as v;
+@use "mixin" as m;
+
+
+/* PROJECTS
+---------------------------------------------------------------------------*/
+
+.projects-container{
+   padding-top: 188px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:after{
+      content:"";
+      display: block;
+      width:30%;
+    }
+    
+    @include m.sp-size {
+       flex-direction: column;
+    }
+}
+
+.projects{
+    width:316px;
+    padding-bottom: 60px;
+    @include m.sp-size {
+       width: 280px;
+       margin: 0 auto;
+    }
+    
+    .projects_thumb_link{
+        display: block;
+    }
+    
+    .projects_thumb{
+         width:316px;
+        height: 316px;
+        position: relative;
+        border-radius: 5px;
+        
+        @include m.sp-size {
+            width: 280px;
+            width: 280px;
+        }
+        
+        
+        &.thumb01{
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(0,0,0,0.9) 100%), url(/image/projects/artist_01.png) no-repeat;
+          background-size: auto, cover; 
+        }
+        
+        &.thumb02{
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(0,0,0,0.9) 100%), url(/image/projects/artist_02.png) no-repeat;
+          background-size: auto, cover; 
+        }
+        
+        &.thumb03{
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(0,0,0,0.9) 100%), url(/image/projects/artist_03.png) no-repeat;
+          background-size: auto, cover; 
+        }
+        
+        &.thumb04{
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(0,0,0,0.9) 100%), url(/image/projects/artist_04.png) no-repeat;
+          background-size: auto, cover; 
+        }
+        
+        &.thumb05{
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(0,0,0,0.9) 100%), url(/image/projects/artist_05.png) no-repeat;
+          background-size: auto, cover; 
+        }
+        
+        &.thumb06{
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(0,0,0,0.9) 100%), url(/image/projects/artist_06.png) no-repeat;
+          background-size: auto, cover; 
+        }
+        
+        .projects_thumb_ttl{
+            @include m.p-center;
+            transform: translate(-50%, 12px);
+            width: 278px;
+            height: 140px;
+        } 
+    }
+    
+    .projects_data{
+        text-align: left;
+        
+        .block_status{
+            padding-top: 16px;
+        }
+        
+        .block_date{
+            padding-top: 5px;
+        }
+        
+        .block_tag{
+             padding-top: 10px;
+            
+        }
+    }
+}
+
+////status PARTS////
+
+
+.status-container{
+    display: flex;
+    align-items: center;
+    
+    .status_icon{
+        width:16px;
+        height: 16px;
+       
+    }
+    .status_number{
+        margin-left: 3px;
+         margin-right: 10px;
+    }
+}
+
+
+.tag_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag{
+    border:1px solid #fff;
+    font-size:13px;
+    line-height: 16px;
+    padding: 3px 6px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+
