@@ -623,7 +623,7 @@ footer .footer__menu li a {
 .project-bgImg__wrap .project-bgImg {
   height: 443px;
   width: 100%;
-  background: url(/image/Rectangle%201.png);
+  background: url(../image/Rectangle%201.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -774,33 +774,33 @@ footer .footer__menu li a {
   }
 }
 .projects .projects_thumb.thumb01 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(/image/projects/artist_01.png) no-repeat;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(/image/projects/artist_01.png) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(../image/projects/artist_01.png) no-repeat;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(../image/projects/artist_01.png) no-repeat;
   background-size: auto, cover;
 }
 .projects .projects_thumb.thumb02 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(/image/projects/artist_02.png) no-repeat;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(/image/projects/artist_02.png) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(../image/projects/artist_02.png) no-repeat;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(../image/projects/artist_02.png) no-repeat;
   background-size: auto, cover;
 }
 .projects .projects_thumb.thumb03 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(/image/projects/artist_03.png) no-repeat;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(/image/projects/artist_03.png) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(../image/projects/artist_03.png) no-repeat;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(../image/projects/artist_03.png) no-repeat;
   background-size: auto, cover;
 }
 .projects .projects_thumb.thumb04 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(/image/projects/artist_04.png) no-repeat;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(/image/projects/artist_04.png) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(../image/projects/artist_04.png) no-repeat;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(../image/projects/artist_04.png) no-repeat;
   background-size: auto, cover;
 }
 .projects .projects_thumb.thumb05 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(/image/projects/artist_05.png) no-repeat;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(/image/projects/artist_05.png) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(../image/projects/artist_05.png) no-repeat;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(../image/projects/artist_05.png) no-repeat;
   background-size: auto, cover;
 }
 .projects .projects_thumb.thumb06 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(/image/projects/artist_06.png) no-repeat;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(/image/projects/artist_06.png) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9))), url(../image/projects/artist_06.png) no-repeat;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.9) 100%), url(../image/projects/artist_06.png) no-repeat;
   background-size: auto, cover;
 }
 .projects .projects_thumb .projects_thumb_ttl {
