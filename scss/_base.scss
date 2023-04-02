@@ -15,97 +15,13 @@ body {
 	-webkit-text-size-adjust: none;
 	color: v.$base-white-color;
 	line-height: 1.6;	
-	overflow-x: hidden;
+	overflow-wrap: break-word;
     font-size: 1rem;
     font-weight: 400;
     font-kerning: normal;
-    
+    position: relative;
 }
 
-
-/*TYPO
----------------------------------------------------------------------------*/
-
-h1,h2,h3,h4,h5,h6{
-    font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-}
-
-.large-page-title{
-    font-size: 80px;
-    line-height: 94px;
-}
-
-h2{
-    font-size: 80px;
-    line-height: 94px;
-    color: v.$primary-color;
-    
-    @include m.tablet-size {
-         font-size: 50px;
-        line-height: 59px;
-    }
-}
-
-h3{
-    font-size: 60px;
-    line-height: 70px;
-    color: v.$secondary-color;
-    @include m.tablet-size {
-        font-size: 33px;
-        line-height: 50px;
-    }
-}
-
-
-
-h4{
-    font-size: 50px;
-    line-height: 59px;
-}
-h5{
-    font-size: 40px;
-    line-height: 47px;
-}
-
-h6{
-    font-size: 35px;
-    line-height: 41px;
-}
-
-.lg-txt-bold{
-    font-weight: v.$font-weight-bold;
-    @include m.txt-lg;
-}
-
-
-.lg-txt-regular{
-    font-weight: v.$font-weight-regular;
-    @include m.txt-lg;
-}
-
-.md-txt-bold{
-    font-weight: v.$font-weight-bold;
-    @include m.txt-md;
-}
-
-
-.md-txt-regular{
-    font-weight: v.$font-weight-regular;
-    @include m.txt-md;
-}
-
-.sm-txt-bold{
-    font-weight: v.$font-weight-bold;
-    @include m.txt-sm;
-}
-
-
-.sm-txt-regular{
-    font-weight: v.$font-weight-regular;
-    @include m.txt-sm;
-}
 
 
 /*LAYOUT
@@ -139,25 +55,32 @@ h6{
     margin: 0 auto;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
     border-radius: 30px;
-    padding: 0 80px;
     position: relative;
     
-      @include m.between-pc-sp-size {
-         padding: 0 40px;
-    }
-
-        
      @include m.sp-size {
         width: 90%;
-        padding: 0;
     }
-    
+     
     h2{
         position: absolute;
         top:46px;
         left:0;
     }
 }
+
+  .contents-container__inner{
+         padding: 0 80px;
+        
+         @include m.between-pc-sp-size {
+         padding: 0 40px;
+        }
+
+        
+     @include m.sp-size {
+        padding: 0;
+    }
+        
+    }
 
 
 
@@ -167,44 +90,6 @@ main{
     padding: 110px 0;
 }
 
-
-
-
-/*PAGE TOP（↑）設定
----------------------------------------------------------------------------*/
-.pagetop-show {display: block;}
-
-/*ボタンの設定*/
-.pagetop a {
-	display: block;
-    text-decoration: none;
-    text-align: center;
-    z-index: 10;
-	position: fixed;
-	right: 20px;
-	bottom: 40px;
-     color: #fff;
-    background: rgba(0,0,0,0.4);
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    &::before {
-        content:  '';
-        width: 20px;
-        height: 20px;
-        display:  block;
-        border-top: solid 2px;
-        border-right: solid 2px;
-        transform: rotate(-45deg);
-        position:  absolute;
-        top: 10px;
-        bottom:  0;
-        left:  0;
-        right:  0;
-        margin:  auto;
-    }
-	
-}
 
 
 

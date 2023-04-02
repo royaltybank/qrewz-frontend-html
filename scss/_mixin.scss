@@ -47,14 +47,20 @@
 
 
 //typo//
-
+$xlg-txt: 18px;
 $lg-txt: 16px;
-$md-txt: 14px;
+$md-txt: 15px;
 $sm-txt: 12px;
 
+$xlg-txt-height: 25px;
 $lg-txt-height: 22px;
-$md-txt-height: 19px;
+$md-txt-height: 20px;
 $sm-txt-height: 15px;
+
+@mixin txt-xlg{
+    font-size: $xlg-txt;
+    line-height: $xlg-txt-height;
+}
 
 
 @mixin txt-lg{

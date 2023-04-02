@@ -78,6 +78,7 @@ header {
             
             ul{
                  display: flex;
+                align-items: center;
             }
         
             /*ハンバーガーメニューを非表示にする*/
@@ -145,7 +146,25 @@ header {
 }
 
 
+.login-img-circle {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        vertical-align: top;
 
+        > img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-50%);
+            object-fit: cover;
+        }
+    }
 
 
 

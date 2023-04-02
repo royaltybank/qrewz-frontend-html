@@ -1,0 +1,306 @@
+@use "config/fonts"as f;
+@use "config/variables"as v;
+@use "mixin"as m;
+
+
+/*TYPO
+---------------------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.large-page-title {
+    font-size: 80px;
+    line-height: 94px;
+}
+
+h2 {
+    font-size: 60px;
+    line-height: 70px;
+    color: v.$primary-color;
+
+    @include m.tablet-size {
+        font-size: 50px;
+        line-height: 59px;
+    }
+}
+
+h3 {
+    font-size: 60px;
+    line-height: 70px;
+    color: v.$secondary-color;
+
+    @include m.tablet-size {
+        font-size: 33px;
+        line-height: 50px;
+    }
+}
+
+
+h4 {
+    font-size: 40px;
+    line-height: 47px;
+}
+
+h5 {
+    font-size: 35px;
+    line-height: 41px;
+}
+
+h6 {
+    font-size: 50px;
+    line-height: 59px;
+}
+
+.lg-txt-bold {
+    font-weight: v.$font-weight-bold;
+    @include m.txt-lg;
+}
+
+
+.lg-txt-regular {
+    font-weight: v.$font-weight-regular;
+    @include m.txt-lg;
+}
+
+.md-txt-bold {
+    font-weight: v.$font-weight-bold;
+    @include m.txt-md;
+}
+
+
+.md-txt-regular {
+    font-weight: v.$font-weight-regular;
+    @include m.txt-md;
+}
+
+.sm-txt-bold {
+    font-weight: v.$font-weight-bold;
+    @include m.txt-sm;
+}
+
+
+.sm-txt-regular {
+    font-weight: v.$font-weight-regular;
+    @include m.txt-sm;
+}
+
+
+///margin///
+
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+
+
+////status PARTS////
+
+
+.status-container {
+    display: flex;
+    align-items: center;
+    &.wrap{
+        flex-wrap: wrap;
+    }
+
+    &.icon_before {
+        .item {
+            white-space: nowrap;
+            margin-right: 10px;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                vertical-align: top;
+                margin-right: 4px;
+            }
+
+            &.item_person::before {
+                background-image: url(/image/icons/icon-person.svg);
+                background-size: contain;
+            }
+
+            &.item_token::before {
+                background-image: url(/image/icons/icon-token.svg);
+                background-size: contain;
+            }
+
+            &.item_coin::before {
+                background-image: url(/image/icons/icon-coin.svg);
+                background-size: contain;
+            }
+
+            &.item_reward::before {
+                background-image: url(/image/icons/icon-reward.svg);
+                background-size: contain;
+            }
+
+            &.item_start::before {
+                background-image: url(/image/icons/icon-start.svg);
+                background-size: contain;
+            }
+
+            &.item_reload::before {
+                background-image: url(/image/icons/icon-reload.svg);
+                background-size: contain;
+            }
+
+        }
+
+    }
+    
+    &.icon-only{
+        li{
+            margin: 0 5px;
+        }
+    }
+}
+
+.item-before-icon {
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        vertical-align: middle;
+        margin-right: 6px;
+    }
+    &.twitter_rt::before {
+        background-image: url(/image/icons/icon-twitter_rt.svg);
+        background-size: contain;
+    }
+}
+
+
+.item-after-icon {
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        vertical-align: middle;
+        margin-left: 6px;
+    }
+    &.under::after {
+        background-image: url(/image/icons/icon-under.svg);
+        background-size: contain;
+    }
+}
+
+////projects_data/////
+.projects_data{
+        text-align: left;
+        
+        .block_status{
+            padding-top: 16px;
+        }
+        
+        .block_date{
+            padding-top: 5px;
+        }
+        
+        .block_tag{
+             padding-top: 10px;
+            
+        }
+    }
+
+
+////tag/////
+
+.tag_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    border: 1px solid #fff;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 3px 6px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+////matic/////
+
+.matic_num {
+    color: v.$tertiary-color;
+    font-weight: v.$font-weight-bold;
+    font-size: 36px;
+    line-height: 40px;
+
+    @include m.tablet-size {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url(/image/icons/icon-coin.svg);
+        background-size: contain;
+        vertical-align: middle;
+        margin-right: 8px;
+
+        @include m.tablet-size {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.matic_unit {
+    font-size: 33px;
+    line-height: 40px;
+    font-weight: v.$font-weight-regular;
+    margin-left: 5px;
+
+    @include m.tablet-size {
+        font-size: 22px;
+        line-height: 27px;
+    }
+}
+
+
+///開閉矢印/////
+ .action-btn {
+            position: absolute;
+           
+            display: block;
+            bottom: 12px;
+            right: 14px;
+
+            @include m.sp-size {
+                bottom: 6px;
+                right: 10px;
+            }
+        }
+img.arrow-open{
+             width: 14px;
+        }
+        
+        img.arrow-close{
+            width: 14px;
+             transform: scale(1, -1);
+        }
