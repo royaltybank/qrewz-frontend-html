@@ -526,8 +526,9 @@ header .header__inner {
   height: 70px;
   position: relative;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1340px) {
   header .header__inner {
+    max-width: 100%;
     width: 100%;
   }
 }
