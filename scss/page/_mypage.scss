@@ -37,7 +37,7 @@
     right: 12px;
     top: 8px;
     border-radius: 50%;
-    background: url(/image/icons/icon-edit.svg), rgba(24, 24, 24, 0.6);
+    background: url(../image/icons/icon-edit.svg), rgba(24, 24, 24, 0.6);
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;
@@ -120,7 +120,7 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            background-image: url(/image/icons/icon-lock.svg);
+            background-image: url(../image/icons/icon-lock.svg);
             background-size: contain;
             vertical-align: baseline;
             margin-left: 8px;
@@ -238,7 +238,7 @@ a.url-link {
         display: block;
         width: 34px;
         height: 34px;
-        background-image: url(/image/icons/icon-list.svg);
+        background-image: url(../image/icons/icon-list.svg);
         background-size: contain;
     }
 
@@ -247,7 +247,7 @@ a.url-link {
         display: block;
         width: 34px;
         height: 34px;
-        background-image: url(/image/icons/icon-grid.svg);
+        background-image: url(../image/icons/icon-grid.svg);
         background-size: contain;
     }
 }
@@ -302,7 +302,7 @@ a.url-link {
         height: 16px;
         top: 16px;
         right: 16px;
-        background: url(/image/icons/icon-close.svg) no-repeat;
+        background: url(../image/icons/icon-close.svg) no-repeat;
         background-size: contain;
         background-position: center;
     }
@@ -480,7 +480,7 @@ a.url-link {
             height: 24px;
             vertical-align: middle;
             margin-right: 6px;
-            background-image: url(/image/icons/icon-twitter_rt.svg);
+            background-image: url(../image/icons/icon-twitter_rt.svg);
             background-size: contain;
         }
 
@@ -491,7 +491,7 @@ a.url-link {
 
 
 .detail-cover_bg{
-    background: url(/image/detail/detail-bg.png) no-repeat;
+    background: url(../image/detail/detail-bg.png) no-repeat;
     background-size: cover;
     width:100%;
     height: 600px;

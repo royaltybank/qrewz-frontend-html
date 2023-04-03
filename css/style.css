@@ -352,27 +352,27 @@ h6 {
   margin-right: 4px;
 }
 .status-container.icon_before .item.item_person::before {
-  background-image: url(/image/icons/icon-person.svg);
+  background-image: url(../image/icons/icon-person.svg);
   background-size: contain;
 }
 .status-container.icon_before .item.item_token::before {
-  background-image: url(/image/icons/icon-token.svg);
+  background-image: url(../image/icons/icon-token.svg);
   background-size: contain;
 }
 .status-container.icon_before .item.item_coin::before {
-  background-image: url(/image/icons/icon-coin.svg);
+  background-image: url(../image/icons/icon-coin.svg);
   background-size: contain;
 }
 .status-container.icon_before .item.item_reward::before {
-  background-image: url(/image/icons/icon-reward.svg);
+  background-image: url(../image/icons/icon-reward.svg);
   background-size: contain;
 }
 .status-container.icon_before .item.item_start::before {
-  background-image: url(/image/icons/icon-start.svg);
+  background-image: url(../image/icons/icon-start.svg);
   background-size: contain;
 }
 .status-container.icon_before .item.item_reload::before {
-  background-image: url(/image/icons/icon-reload.svg);
+  background-image: url(../image/icons/icon-reload.svg);
   background-size: contain;
 }
 .status-container.icon-only li {
@@ -388,7 +388,7 @@ h6 {
   margin-right: 6px;
 }
 .item-before-icon.twitter_rt::before {
-  background-image: url(/image/icons/icon-twitter_rt.svg);
+  background-image: url(../image/icons/icon-twitter_rt.svg);
   background-size: contain;
 }
 
@@ -401,7 +401,7 @@ h6 {
   margin-left: 6px;
 }
 .item-after-icon.under::after {
-  background-image: url(/image/icons/icon-under.svg);
+  background-image: url(../image/icons/icon-under.svg);
   background-size: contain;
 }
 
@@ -453,7 +453,7 @@ h6 {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url(/image/icons/icon-coin.svg);
+  background-image: url(../image/icons/icon-coin.svg);
   background-size: contain;
   vertical-align: middle;
   margin-right: 8px;
@@ -825,7 +825,7 @@ footer .footer__menu li a {
   right: 12px;
   top: 8px;
   border-radius: 50%;
-  background: url(/image/icons/icon-edit.svg), rgba(24, 24, 24, 0.6);
+  background: url(../image/icons/icon-edit.svg), rgba(24, 24, 24, 0.6);
   background-size: 22px;
   background-repeat: no-repeat;
   background-position: center;
@@ -909,7 +909,7 @@ footer .footer__menu li a {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url(/image/icons/icon-lock.svg);
+  background-image: url(../image/icons/icon-lock.svg);
   background-size: contain;
   vertical-align: baseline;
   margin-left: 8px;
@@ -1026,7 +1026,7 @@ a.url-link {
   display: block;
   width: 34px;
   height: 34px;
-  background-image: url(/image/icons/icon-list.svg);
+  background-image: url(../image/icons/icon-list.svg);
   background-size: contain;
 }
 .switch-container .switch-grid {
@@ -1034,7 +1034,7 @@ a.url-link {
   display: block;
   width: 34px;
   height: 34px;
-  background-image: url(/image/icons/icon-grid.svg);
+  background-image: url(../image/icons/icon-grid.svg);
   background-size: contain;
 }
 
@@ -1088,7 +1088,7 @@ a.url-link {
   height: 16px;
   top: 16px;
   right: 16px;
-  background: url(/image/icons/icon-close.svg) no-repeat;
+  background: url(../image/icons/icon-close.svg) no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -1258,12 +1258,12 @@ a.url-link {
   height: 24px;
   vertical-align: middle;
   margin-right: 6px;
-  background-image: url(/image/icons/icon-twitter_rt.svg);
+  background-image: url(../image/icons/icon-twitter_rt.svg);
   background-size: contain;
 }
 
 .detail-cover_bg {
-  background: url(/image/detail/detail-bg.png) no-repeat;
+  background: url(../image/detail/detail-bg.png) no-repeat;
   background-size: cover;
   width: 100%;
   height: 600px;

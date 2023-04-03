@@ -132,32 +132,32 @@ h6 {
             }
 
             &.item_person::before {
-                background-image: url(/image/icons/icon-person.svg);
+                background-image: url(../image/icons/icon-person.svg);
                 background-size: contain;
             }
 
             &.item_token::before {
-                background-image: url(/image/icons/icon-token.svg);
+                background-image: url(../image/icons/icon-token.svg);
                 background-size: contain;
             }
 
             &.item_coin::before {
-                background-image: url(/image/icons/icon-coin.svg);
+                background-image: url(../image/icons/icon-coin.svg);
                 background-size: contain;
             }
 
             &.item_reward::before {
-                background-image: url(/image/icons/icon-reward.svg);
+                background-image: url(../image/icons/icon-reward.svg);
                 background-size: contain;
             }
 
             &.item_start::before {
-                background-image: url(/image/icons/icon-start.svg);
+                background-image: url(../image/icons/icon-start.svg);
                 background-size: contain;
             }
 
             &.item_reload::before {
-                background-image: url(/image/icons/icon-reload.svg);
+                background-image: url(../image/icons/icon-reload.svg);
                 background-size: contain;
             }
 
@@ -182,7 +182,7 @@ h6 {
         margin-right: 6px;
     }
     &.twitter_rt::before {
-        background-image: url(/image/icons/icon-twitter_rt.svg);
+        background-image: url(../image/icons/icon-twitter_rt.svg);
         background-size: contain;
     }
 }
@@ -198,7 +198,7 @@ h6 {
         margin-left: 6px;
     }
     &.under::after {
-        background-image: url(/image/icons/icon-under.svg);
+        background-image: url(../image/icons/icon-under.svg);
         background-size: contain;
     }
 }
@@ -258,7 +258,7 @@ h6 {
         display: inline-block;
         width: 30px;
         height: 30px;
-        background-image: url(/image/icons/icon-coin.svg);
+        background-image: url(../image/icons/icon-coin.svg);
         background-size: contain;
         vertical-align: middle;
         margin-right: 8px;
