@@ -5,6 +5,19 @@
 /* MY PAGE
 ---------------------------------------------------------------------------*/
 
+//responsive//
+section.mypage-header-section {
+    .status-container,
+    .info_block{
+        @include m.txt-md;
+
+        @include m.sp-size {
+            @include m.txt-sm;
+        }
+    }
+
+}
+
 ///cover/////
 
 .cover-profile {
@@ -41,6 +54,13 @@
     background-size: 22px;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include m.tablet-size {
+        width: 34px;
+        height: 34px;
+        background-size: 16px;
+
+    }
 }
 
 
@@ -114,6 +134,12 @@
         line-height: 34px;
         font-weight: v.$font-weight-bold;
 
+        @include m.sp-size {
+            font-size: 20px;
+            line-height: 27px;
+        }
+
+
 
         &::after {
             content: '';
@@ -124,6 +150,12 @@
             background-size: contain;
             vertical-align: baseline;
             margin-left: 8px;
+
+            @include m.sp-size {
+                width: 16px;
+                height: 16px;
+                margin-left: 4px;
+            }
         }
     }
 
@@ -211,21 +243,48 @@ a.url-link {
     }
 }
 
+
 .mybadge-container {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-
-    @include m.sp-size {
-        flex-direction: column;
-    }
 
     li {
+       width: 142px;
+        
+        @include m.sp-size {
+          width: calc(100% / 4);
+        }
+       
+    }
+    
+    .badge{
+        padding: 13px;
+        @include m.sp-size {
+            padding: 8px;
+        }
+    }
 
-        width: calc(calc(100% - 150px) / 4);
-        border-radius: 50%;
-        height: 220px;
+
+    
+    .badge-status{
+        display: flex;
+        justify-content: space-between;
+        
+        .status_icon{
+         
+            img{
+                width:26px;
+                height: 26px;
+                @include m.sp-size {
+                width:19px;
+                height: 19px;
+                }
+            }
+           
+        }
+        
+       
     }
 
 
@@ -276,14 +335,16 @@ a.url-link {
     inset: 0;
     margin: auto;
     width: 512px;
-    height: 700px;
+    height: 820px;
     z-index: 10;
     background-color: rgba(122, 69, 229, 0.7);
     backdrop-filter: blur(6px);
     border-radius: 10px;
+    overflow: scroll;
 
     @include m.sp-size {
         width: 90%;
+        height: 720px;
     }
 
     .modal_inner {
@@ -310,9 +371,12 @@ a.url-link {
     .modal_subject {
         font-size: 38px;
         font-weight: v.$font-weight-bold;
-
         @include m.sp-size {
             font-size: 25px;
+        }
+        
+        .txt_subject{
+            font-size: 32px;
         }
 
         .item-before-icon {
@@ -343,7 +407,7 @@ a.url-link {
         margin-top: 10px;
 
         .block_thumb {
-            width: 130px;
+            width: 120px;
 
             @include m.sp-size {
                 width: 88px;
@@ -352,13 +416,17 @@ a.url-link {
 
         .block_txt {
             margin-left: 15px;
-            width: calc(100% - 130px);
+            width: calc(100% - 120px);
 
             @include m.sp-size {
                 margin-left: 10px;
                 width: calc(100% - 88px);
             }
         }
+    }
+    
+    .modal_badge-status{
+        text-align: right;
     }
 
     .status-container {
@@ -372,6 +440,7 @@ a.url-link {
 
     .modal_matic {
         text-align: right;
+        margin-top: 40px;
 
         .matic_num {
             font-weight: v.$font-weight-regular;
@@ -434,24 +503,31 @@ a.url-link {
         text-align: left;
     }
 
+    
+     ///TWETTER-RT////
     .tweet-block {
 
         dt {
             font-size: 20px;
-            margin-top: 40px;
+            margin-top: 30px;
 
             @include m.sp-size {
                 font-size: 14px;
                 margin-top: 20px;
             }
         }
-
+        //仮tweetbox
         dd {
             margin-top: 13px;
             width: 100%;
             height: 200px;
             border-radius: 15px;
             background: v.$base-white-color;
+            
+            @include m.sp-size {
+               margin-top: 8px;
+                height: 138px;
+            }
 
         }
 
@@ -472,6 +548,11 @@ a.url-link {
         border-radius: 22px;
         background: #181818;
         color: v.$base-white-color;
+        
+          @include m.sp-size {
+                 font-size: 14px;
+               width: 148px;
+            }
 
         &::before {
             content: '';
@@ -482,27 +563,115 @@ a.url-link {
             margin-right: 6px;
             background-image: url(../image/icons/icon-twitter_rt.svg);
             background-size: contain;
+            
+              @include m.sp-size {
+                 width: 18px;
+                  height: 18px;
+            }
         }
 
     }
+    
+    //////LIVE/////////////
+        
+    .live-block__container {
+        display: flex;
+        align-items: center;
+        margin-top: 26px;
+
+        .block_thumb {
+            width: 92px;
+
+            @include m.sp-size {
+                width: 68px;
+            }
+        }
+
+        .block_txt {
+            margin-left:40px;
+            width: calc(100% - 92px);
+
+            @include m.sp-size {
+                margin-left: 10px;
+                width: calc(100% - 68px);
+            }
+        }
+        
+        
+        .live_ttl{
+            font-size:20px;
+            line-height: 27px;
+            font-weight: v.$font-weight-bold;
+            
+             @include m.sp-size {
+                 font-size:16px;
+                line-height: 20px;
+                font-weight: v.$font-weight-bold;
+            }
+        }
+        
+        .status_lv{
+            .num{
+                 font-size: 22px;
+                line-height: 22px;
+             }
+        }
+        
+         .modal-live_matic {
+        text-align: right;
+
+        .matic_num {
+            font-weight: v.$font-weight-regular;
+            font-size: 32px;
+            line-height: 44px;
+
+            @include m.sp-size {
+                font-size: 27px;
+                line-height: 37px;
+            }
+
+            &::before {
+                width: 22px;
+                height: 22px;
+
+                @include m.sp-size {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .matic_unit {
+            font-size: 14px;
+            line-height: 19px;
+
+            @include m.sp-size {
+                @include m.txt-sm;
+            }
+        }
+    }
+    }
+        
 
 
 }
 
-
-.detail-cover_bg{
+/////?????
+.detail-cover_bg {
     background: url(../image/detail/detail-bg.png) no-repeat;
     background-size: cover;
-    width:100%;
+    width: 100%;
     height: 600px;
-    padding-top:30px; 
-    border-bottom:2px solid red;
-    
-    .detail-cover{
-        width:100%;
+    padding-top: 30px;
+    border-bottom: 2px solid red;
+
+    .detail-cover {
+        width: 100%;
         min-height: 400px;
         background: rgba(0, 0, 0, 0.5);
-         backdrop-filter: blur(6px);
-        
+        backdrop-filter: blur(6px);
+
     }
 }
+
+////////
