@@ -139,9 +139,8 @@ section.mypage-header-section {
             line-height: 27px;
         }
 
-
-
-        &::after {
+        .ttl-lock{
+            &::after {
             content: '';
             display: inline-block;
             width: 20px;
@@ -149,7 +148,7 @@ section.mypage-header-section {
             background-image: url(../image/icons/icon-lock.svg);
             background-size: contain;
             vertical-align: baseline;
-            margin-left: 8px;
+            margin-left: 6px;
 
             @include m.sp-size {
                 width: 16px;
@@ -157,6 +156,10 @@ section.mypage-header-section {
                 margin-left: 4px;
             }
         }
+            
+        }
+
+        
     }
 
 }
