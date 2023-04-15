@@ -10,6 +10,12 @@
     }
 }
 
+@mixin pc-tablet-size{
+    @media screen and (min-width: (v.$device-sp-size)) {
+        @content;
+    }
+}
+
 @mixin between-pc-sp-size{
   
     @media screen and (min-width: (v.$device-sp-size)) and (max-width:(v.$size-container)) {

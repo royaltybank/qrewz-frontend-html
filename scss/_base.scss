@@ -58,7 +58,9 @@ body {
     position: relative;
     
      @include m.sp-size {
-        width: 90%;
+       width: calc( 100% - 40px );
+        margin: 40px 20px;
+        max-width: 100%;
     }
      
     h2{
@@ -69,15 +71,15 @@ body {
 }
 
   .contents-container__inner{
-         padding: 0 80px;
+         padding: 140px 80px 60px;
         
          @include m.between-pc-sp-size {
-         padding: 0 40px;
+         padding: 140px 40px 60px;
         }
 
         
      @include m.sp-size {
-        padding: 0;
+        padding: 110px 20px 30px;
     }
         
     }

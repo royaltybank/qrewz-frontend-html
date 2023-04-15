@@ -105,6 +105,10 @@ h6 {
     margin-top: 10px;
 }
 
+.mt20 {
+    margin-top: 10px;
+}
+
 
 
 ////status PARTS////
@@ -113,7 +117,8 @@ h6 {
 .status-container {
     display: flex;
     align-items: center;
-    &.wrap{
+
+    &.wrap {
         flex-wrap: wrap;
     }
 
@@ -164,9 +169,9 @@ h6 {
         }
 
     }
-    
-    &.icon-only{
-        li{
+
+    &.icon-only {
+        li {
             margin: 0 5px;
         }
     }
@@ -181,139 +186,192 @@ h6 {
         vertical-align: middle;
         margin-right: 6px;
     }
+
     &.twitter_rt::before {
         background-image: url(../image/icons/icon-twitter_rt.svg);
         background-size: contain;
     }
-    
-     &.live::before {
+
+    &.live::before {
         background-image: url(../image/icons/icon-live.svg);
         background-size: contain;
     }
 }
 
 
-.item-after-icon {
-    &::after {
-        content: '';
-        display: inline-block;
-        width: 13px;
-        height: 13px;
-        vertical-align: middle;
-        margin-left: 6px;
-    }
-    &.under::after {
-        background-image: url(../image/icons/icon-under.svg);
-        background-size: contain;
-    }
-}
-
-////projects_data/////
-.projects_data{
-        text-align: left;
-        
-        .block_status{
-            padding-top: 16px;
-        }
-        
-        .block_date{
-            padding-top: 5px;
-        }
-        
-        .block_tag{
-             padding-top: 10px;
-            
-        }
-    }
-
-
-////tag/////
-
-.tag_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.tag {
-    border: 1px solid #fff;
-    font-size: 13px;
-    line-height: 16px;
-    padding: 3px 6px;
-    display: inline-block;
-    text-align: center;
-}
-
-
-////matic/////
-
-.matic_num {
-    color: v.$tertiary-color;
-    font-weight: v.$font-weight-bold;
-    font-size: 36px;
-    line-height: 40px;
-
-    @include m.tablet-size {
-        font-size: 24px;
-        line-height: 27px;
-    }
-
+.item-only-icon {
     &::before {
         content: '';
         display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-image: url(../image/icons/icon-coin.svg);
-        background-size: contain;
+        width: 24px;
+        height: 24px;
         vertical-align: middle;
-        margin-right: 8px;
+    }
+    
+    &.icon_lg{
+          &::before {
+        width: 34px;
+        height: 34px;
+        }
+    }
+
+    //shadow//
+    &.item_coin-shadow::before {
+        background-image: url(../image/icons/icon-coin-shadow.svg);
+        background-size: contain;
+    }
+   &.item_cover_shadow::before {
+        background-image: url(../image/icons/icon-cover_shadow.svg);
+        background-size: contain;
+    }
+
+    &.item_gift_shadow::before {
+            background-image: url(../image/icons/icon-gift_shadow.svg);
+            background-size: contain;
+        }
+    
+
+    &.item_live_shadow::before {
+            background-image: url(../image/icons/icon-live_shadow.svg);
+            background-size: contain;
+        }
+    
+        &.item_mv_shadow::before {
+            background-image: url(../image/icons/icon-mv_shadow.svg);
+            background-size: contain;
+        }
+    
+        &.item_twitterrt_shadow::before {
+            background-image: url(../image/icons/icon-twitterrt_shadow.svg);
+            background-size: contain;
+        }
+
+}
+
+
+    .item-after-icon {
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        &.under::after {
+            background-image: url(../image/icons/icon-under.svg);
+            background-size: contain;
+        }
+    }
+
+    ////projects_data/////
+    .projects_data {
+        text-align: left;
+
+        .block_status {
+            padding-top: 16px;
+        }
+
+        .block_date {
+            padding-top: 5px;
+        }
+
+        .block_tag {
+            padding-top: 10px;
+
+        }
+    }
+
+
+    ////tag/////
+
+    .tag_container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tag {
+        border: 1px solid #fff;
+        font-size: 13px;
+        line-height: 16px;
+        padding: 3px 6px;
+        display: inline-block;
+        text-align: center;
+    }
+
+
+    ////matic/////
+
+    .matic_num {
+        color: v.$tertiary-color;
+        font-weight: v.$font-weight-bold;
+        font-size: 36px;
+        line-height: 40px;
 
         @include m.tablet-size {
-            width: 20px;
-            height: 20px;
+            font-size: 24px;
+            line-height: 27px;
         }
-    }
-}
 
-.matic_unit {
-    font-size: 33px;
-    line-height: 40px;
-    font-weight: v.$font-weight-regular;
-    margin-left: 5px;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url(../image/icons/icon-coin.svg);
+            background-size: contain;
+            vertical-align: middle;
+            margin-right: 8px;
 
-    @include m.tablet-size {
-        font-size: 22px;
-        line-height: 27px;
-    }
-}
-
-
-///開閉矢印/////
- .action-btn {
-            position: absolute;
-           
-            display: block;
-            bottom: 12px;
-            right: 14px;
-
-            @include m.sp-size {
-                bottom: 6px;
-                right: 10px;
+            @include m.tablet-size {
+                width: 20px;
+                height: 20px;
             }
         }
-img.arrow-open{
-             width: 14px;
+    }
+
+    .matic_unit {
+        font-size: 33px;
+        line-height: 40px;
+        font-weight: v.$font-weight-regular;
+        margin-left: 5px;
+
+        @include m.tablet-size {
+            font-size: 22px;
+            line-height: 27px;
         }
-        
-        img.arrow-close{
-            width: 14px;
-             transform: scale(1, -1);
+    }
+
+
+    ///開閉矢印/////
+    .action-btn {
+        position: absolute;
+
+        display: block;
+        bottom: 12px;
+        right: 14px;
+
+        @include m.sp-size {
+            bottom: 6px;
+            right: 10px;
         }
+    }
+
+    img.arrow-open {
+        width: 14px;
+    }
+
+    img.arrow-close {
+        width: 14px;
+        transform: scale(1, -1);
+    }
 
 
 
-///バッジ6角マスク//
-.polygon-mask {
+    ///バッジ6角マスク//
+    .polygon-mask {
         mask-image: url("../image/polygon.svg");
         mask-repeat: no-repeat;
         mask-position: center;
@@ -326,6 +384,7 @@ img.arrow-open{
 
     .badge-area {
         position: relative;
+
         .project-box {
             border: v.$base-black-color 3px solid;
             width: 32px;
@@ -338,17 +397,59 @@ img.arrow-open{
     }
 
 
-//バッジステイタスレベル//
- .status_lv{
-            font-size: 9px;
-     color:v.$base-white-color;
-            .num{
-                font-size: 25px;
-                line-height:25px;
-                color: v.$tertiary-color;
-                @include m.sp-size {
-                   font-size:19px;
-                line-height:19px;
-                }
+    //バッジステイタスレベル//
+    .status_lv {
+        font-size: 9px;
+        color: v.$base-white-color;
+
+        .num {
+            font-size: 25px;
+            line-height: 25px;
+            color: v.$tertiary-color;
+
+            @include m.sp-size {
+                font-size: 19px;
+                line-height: 19px;
             }
         }
+    }
+
+
+//表示nav///
+
+.switch-container {
+
+    .switch-list {
+        margin: 0 0 0 auto;
+        display: block;
+        width: 34px;
+        height: 34px;
+        background-image: url(../image/icons/icon-list.svg);
+        background-size: contain;
+    }
+
+    .switch-grid {
+        margin: 0 0 0 auto;
+        display: block;
+        width: 34px;
+        height: 34px;
+        background-image: url(../image/icons/icon-grid.svg);
+        background-size: contain;
+    }
+}
+
+.nav-sort-list {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+
+    li {
+        margin-left: 20px;
+
+        a {
+            color: v.$base-white-color;
+            text-decoration: none;
+        }
+
+    }
+}
