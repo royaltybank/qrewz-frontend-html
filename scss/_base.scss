@@ -11,7 +11,7 @@ html,body {
 }
 
 body {
-	font-family: v.$base_font;
+    font-family: 'Noto Sans JP', sans-serif;
 	-webkit-text-size-adjust: none;
 	color: v.$base-white-color;
 	line-height: 1.6;	
@@ -29,7 +29,7 @@ body {
 
 #container{
      width: 100%;
-      background:linear-gradient(45deg, #444387,#020302,#7042A1);/*グラデーションを定義*/
+      background:linear-gradient(45deg,#444387,#231636,#7042A1);/*グラデーションを定義*/
       background-size: 150% 150%;/*サイズを大きくひきのばす*/
       animation: bggradient 5.0s ease infinite;  
     text-align: center;

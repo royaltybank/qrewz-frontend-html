@@ -9,6 +9,7 @@ header {
     z-index: 99;
     height: v.$header-height;
      background: linear-gradient(to top, rgba(255,255,255,0) 20%, rgba(0,0,0,0.9) 100%);
+    backdrop-filter: blur(6px);
     
     .header__inner{
         max-width: v.$header-width;

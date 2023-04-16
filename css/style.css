@@ -123,10 +123,22 @@ ul, ol {
 /*Raleway*/
 @font-face {
   font-family: "Raleway";
-  src: url("/font/Raleway/Raleway-Medium.ttf");
+  src: url("/font/Raleway/Raleway-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
 }
-/*FONT
----------------------------------------------------------------------------*/
+@font-face {
+  font-family: "Raleway";
+  src: url("/font/Raleway/Raleway-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/font/Raleway/Raleway-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
 /*BREAK POINT
 ---------------------------------------------------------------------------*/
 /* MIXIN
@@ -140,7 +152,7 @@ html, body {
 }
 
 body {
-  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   -webkit-text-size-adjust: none;
   color: #fff;
   line-height: 1.6;
@@ -156,7 +168,7 @@ body {
 ---------------------------------------------------------------------------*/
 #container {
   width: 100%;
-  background: linear-gradient(45deg, #444387, #020302, #7042A1); /*グラデーションを定義*/
+  background: linear-gradient(45deg, #444387, #231636, #7042A1); /*グラデーションを定義*/
   background-size: 150% 150%; /*サイズを大きくひきのばす*/
   -webkit-animation: bggradient 5s ease infinite;
           animation: bggradient 5s ease infinite;
@@ -238,7 +250,7 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .large-page-title {
@@ -451,6 +463,28 @@ h6 {
   background-size: contain;
 }
 
+.donate-icon-btn {
+  display: inline-block;
+  font-size: 16px;
+  height: 30px;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 16px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
+.donate-icon-btn::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  vertical-align: bottom;
+  margin-left: 6px;
+  background-image: url(../image/icons/icon-donate.svg);
+  background-size: contain;
+  background-position: top;
+}
+
 .projects_data {
   text-align: left;
 }
@@ -627,9 +661,11 @@ header {
   width: 100%;
   position: fixed;
   z-index: 99;
-  height: 70px;
+  height: 94px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.9)));
   background: linear-gradient(to top, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.9) 100%);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 header .header__inner {
   max-width: 1340px;
@@ -643,7 +679,7 @@ header .header__inner {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 70px;
+  height: 94px;
   position: relative;
 }
 @media screen and (max-width: 1340px) {
@@ -1272,6 +1308,10 @@ a.url-link {
 
 /* PROJECT=DETAIL PAGE
 ---------------------------------------------------------------------------*/
+.contents-section {
+  margin-top: 30px;
+}
+
 .detail-cover-bg {
   padding-bottom: 25px;
   background-size: cover;
@@ -1280,7 +1320,7 @@ a.url-link {
 }
 
 .detail-cover-blur {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   padding: 60px 80px;
@@ -1352,7 +1392,7 @@ a.url-link {
 .detail-cover_info {
   margin-top: 30px;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 21px;
   position: relative;
   padding-bottom: 20px;
@@ -1374,11 +1414,12 @@ a.url-link {
             flex-direction: column;
   }
 }
-.detail-cover_sns .status-container.donate-container {
+.detail-cover_sns .donate-container {
   margin-left: 60px;
+  text-align: left;
 }
 @media screen and (max-width: 600px) {
-  .detail-cover_sns .status-container.donate-container {
+  .detail-cover_sns .donate-container {
     margin-left: 0;
     margin-top: 22px;
   }

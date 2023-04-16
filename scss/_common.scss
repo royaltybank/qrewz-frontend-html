@@ -14,7 +14,7 @@ h5,
 h6 {
     font-family: "Raleway", sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .large-page-title {
@@ -263,7 +263,31 @@ h6 {
             background-image: url(../image/icons/icon-under.svg);
             background-size: contain;
         }
+        
+        
     }
+.donate-icon-btn{
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
+    color: v.$base-white-color;
+    text-decoration: none;
+    padding: 2px 16px;
+    border:1px solid v.$base-white-color;
+    border-radius: 15px;
+     &::after {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            vertical-align: bottom;
+            margin-left: 6px;
+            background-image: url(../image/icons/icon-donate.svg);
+            background-size: contain;
+         background-position: top;
+        }
+    
+}
 
     ////projects_data/////
     .projects_data {
