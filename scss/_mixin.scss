@@ -23,6 +23,13 @@
     }
 }
 
+@mixin between-pc-tablet-size{
+  
+    @media screen and (min-width: (v.$device-tablet-size)) and (max-width:(v.$size-container)) {
+        @content;
+    }
+}
+
 @mixin smaller-than-1100{
     @media screen and (max-width: 1100px) {
         @content;

@@ -156,7 +156,6 @@ body {
   -webkit-text-size-adjust: none;
   color: #fff;
   line-height: 1.6;
-  overflow-wrap: break-word;
   font-size: 1rem;
   font-weight: 400;
   -webkit-font-kerning: normal;
@@ -1449,12 +1448,23 @@ a.url-link {
       flex-wrap: wrap;
   gap: 40px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 900px) and (max-width: 1280px) {
   .action-token_container {
-    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .action-token_container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media screen and (max-width: 600px) {
+  .action-token_container {
+    gap: 20px;
   }
 }
 
@@ -1479,6 +1489,7 @@ a.url-link {
   position: absolute;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 .action-token .action-token_data {
   position: absolute;
@@ -1579,6 +1590,9 @@ a.url-link {
     margin-left: 10px;
   }
 }
+section.section_works .contents-container__inner {
+  padding-top: 110px;
+}
 section.section_works .item_ttl {
   font-size: 22px;
   line-height: 29px;
@@ -1664,8 +1678,8 @@ section.section_works .item_credit {
   margin: auto;
   width: 512px;
   height: 820px;
-  z-index: 10;
-  background-color: rgba(122, 69, 229, 0.7);
+  z-index: 110;
+  background-color: rgba(122, 69, 229, 0.6);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   border-radius: 10px;
@@ -1678,7 +1692,7 @@ section.section_works .item_credit {
   }
 }
 .modal-box.modal-live-detail {
-  z-index: 11;
+  z-index: 111;
 }
 .modal-box .modal_inner {
   padding: 44px;
@@ -1702,11 +1716,13 @@ section.section_works .item_credit {
 }
 .modal-box .modal_subject {
   font-size: 38px;
+  line-height: 44px;
   font-weight: 700;
 }
 @media screen and (max-width: 600px) {
   .modal-box .modal_subject {
     font-size: 25px;
+    font-size: 32px;
   }
 }
 .modal-box .modal_subject .txt_subject {

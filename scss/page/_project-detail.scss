@@ -123,11 +123,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-
+    
+    @include m.between-pc-tablet-size {
+        justify-content: center;
+    }
+    
+    @include m.tablet-size {
+        justify-content: space-between;
+    }
 
     @include m.sp-size {
         gap: 20px;
-        justify-content: space-between;
     }
 
 }
@@ -154,6 +160,7 @@
         position: absolute;
         z-index: 1;
         background: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
     }
 
     .action-token_data {
@@ -235,7 +242,6 @@
     }
 
     .detail_box-02 {
-        //flex: 1;
         width:580px;
         text-align: left;
         margin-left: 84px;
@@ -259,6 +265,9 @@
 }
 
 section.section_works {
+    .contents-container__inner{
+        padding-top: 110px;
+    }
 
     .item_ttl {
         font-size: 22px;
