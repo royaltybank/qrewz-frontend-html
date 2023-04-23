@@ -49,14 +49,14 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    width: 420px;
-    height: 420px;
+    width: 360px;
+    height: 360px;
     vertical-align: top;
     filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, 0.2));
 
     @include m.tablet-size {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     > img {
@@ -81,15 +81,16 @@
 .detail-cover_info {
     margin-top: 30px;
     text-align: left;
-    font-size: 14px;
-    line-height: 21px;
+    @include m.txt-md;
+   //font-size: 14px;
+    //line-height: 21px;
     position: relative;
     padding-bottom: 20px;
 }
 
 .detail-cover_sns {
     margin-top: 30px;
-    @include m.txt-lg;
+     @include m.txt-md;
     display: flex;
 
     @include m.sp-size {
@@ -193,9 +194,13 @@
     display: flex;
     margin-top: 40px;
     
-     @include m.pc-size {
-            //width: 1120px;
+    &.first-container{
+         @include m.sp-size {
+             margin-top: 18px;
         }
+    }
+    
+    
  
 }
 
@@ -213,12 +218,14 @@
 
     .works_detail {
         padding-left: 36px;
-        width: calc( 100% - 156px);
-
+        width: calc( 100% - 120px);
+        
+        @include m.tablet-size {
+                padding-left: 16px;
+        }
         
         @include m.sp-size {
            width: calc( 100% - 64px);
-                padding-left: 16px;
         }
     }
 
@@ -226,43 +233,39 @@
 .detail_container {
     display: flex;
 
-    @include m.smaller-than-1100 {
-        flex-direction: column;
-    }
+
+    
+     @include m.sp-size {
+          flex-direction: column;
+        }
 
 
     .detail_box-01 {
         text-align: left;
-        width: 266px;
+        width: 40%;
 
-        @include m.smaller-than-1100 {
+        @include m.sp-size {
+            width: 100%;
             order: 2;
-
         }
     }
 
     .detail_box-02 {
-        width:580px;
+         width: 60%;
         text-align: left;
-        margin-left: 84px;
-
-        @include m.smaller-than-1100 {
-            width:100%;
+        
+         
+        @include m.sp-size {
+           width:100%;
             order: 1;
             margin-left: 0;
         }
 
+
     }
 }
 
- @media screen and (min-width: 1100px) and (max-width: 1200px) {
-     .detail_container {
-          .detail_box-02 {
-           margin-left: 10px;
-         }
-     }
-        
-}
+
 
 section.section_works {
     .contents-container__inner{
@@ -273,40 +276,27 @@ section.section_works {
         font-size: 22px;
         line-height: 29px;
         font-weight: v.$font-weight-bold;
+        text-align: left;
 
         @include m.sp-size {
             font-size: 15px;
             line-height: 20px;
         }
     }
-
-    .item_release-date {
-        margin-top: 20px;
-
-        @include m.tablet-size {
-            display: none;
-        }
-    }
-    
-      .sp__item_release-date {
-         
-
-        @include m.pc-tablet-size {
-            display: none;
-        }
-    }
     
     
     
 
-    .item_status__container {
+    .works_status-container__container {
         display: flex;
-         @include m.sp-size {
+        //align-items: center;
+         @include m.tablet-size {
                 font-size: 13px;
             }
     }
 
     .works_status-container {
+        padding-left: 10px;
         flex-wrap: wrap;
         
         li{
@@ -314,10 +304,10 @@ section.section_works {
         }
 
         img {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
 
-            @include m.sp-size {
+            @include m.tablet-size {
                 width: 22px;
                 height: 22px;
             }
@@ -325,13 +315,17 @@ section.section_works {
 
     }
 
-    .item_credit__container {
+    .action-btn__container {
         position: relative;
         padding-bottom: 16px;
+        
+         @include m.tablet-size {
+             
+        }
          @include m.sp-size {
              margin-top: 5px;
              font-size:13px;
-              line-height: 15px;
+              line-height: 18px;
         }
 
         .action-btn {
@@ -339,16 +333,21 @@ section.section_works {
         }
 
     }
-
-    .item_credit {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        padding-bottom: 10px;
-
-        @include m.tablet-size {
+    
+    .credit_container{
+        margin-bottom: 10px;
+            overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+        @include m.sp-size {
             display: none;
         }
+          
     }
+
+ 
+    
+    
 
 }

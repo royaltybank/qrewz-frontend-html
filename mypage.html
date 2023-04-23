@@ -319,14 +319,65 @@
     <!--このテンプレート専用のスクリプト-->
     <script src="js/main.js"></script>
     
+    <!--プロフィール編集-->
+    <div class="modal-box modal-box_edit" style="display:">
+        <a class="close-btn" href="#"></a>
+        <div class="main-img_area">
+        <div class="main-img" style="background-image: url(./image/mypage/cover-photo.png); background-size: cover; ">
+            <a class="upload-btn size-lg" href="#"></a>
+        <div class="profile_thumbnail">
+                                <div class="img-circle">
+                                    <a class="upload-btn size-sm" href="#"></a>
+                                    <img src="./image/mypage/prof.png" alt="">
+                                </div>
+                            </div>
+        </div>
+        </div>
+        <div class="modal_inner">
+        <div class="form_container">         
+            <div class="item_label">
+             <label for="display-name">ディスプレイ名</label>
+            </div>
+            <div class="item_txt">
+                <div class="count">30</div>
+            <input type="text" id="display-name" class="form-text" placeholder="あちゃ"/>
+             </div>
+        </div>
+            
+              <div class="form_container second">         
+            <div class="item_label">
+             <label for="profile">プロフィール</label>
+            </div>
+            <div class="item_txt">
+                <div class="count">150</div>
+               <textarea class="form-text" id="profile" rows="3" placeholder="あちゃ"> 音楽・映画・動物好き ユニコーン / スピッツ / OKAMOTO'S / MAN WITH A MISSION /TENDOUJI / むぎ(猫) / https://nazology.net/archives/123271
+                </textarea>
+           
+             </div>
+        </div>
+      
+            
+             <div class="btn-area btns_container">
+                 <div class="btns">
+                <a class="btn-modal-solid" href="#">Reset</a>
+                </div>
+                 <div class="btns">
+                  <a class="btn-modal-solid" href="#">Save</a>
+                 </div>
+            </div>
+        </div>
+         
+       
+    </div>
+    
      <!--ポップアップ Live詳細-->
-    <div class="modal-box modal-live-detail" style="">
+    <div class="modal-box modal-box_basic modal-box_basic__sm" style="display:none;">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
             <div class="modal_subject">
-                <span class="txt_subject">
+                
 23.01.01  渋谷ライブ（朝）
-                </span>
+             
             </div>
             <div class="modal_name">Teary Planet</div>
             <div class="modal_detail__container">
@@ -383,7 +434,7 @@
         </div>
     </div>
     <!--ポップアップ Liveバッジ-->
-    <div class="modal-box" style="display:none;">
+    <div class="modal-box modal-box_basic" style="display:none;">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
             <div class="modal_subject">
@@ -568,7 +619,7 @@
         </div>
     </div>
      <!--ポップアップ Twitter RT-->
-    <div class="modal-box" style="display: none;">
+    <div class="modal-box modal-box_basic" style="display:">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
             <div class="modal_subject">
@@ -639,7 +690,7 @@
 
 
             <div class="btn-area">
-                <a class="btn-retweet">Retweetする</a>
+                <a class="btn-retweet" href="#">Retweetする</a>
 
             </div>
 

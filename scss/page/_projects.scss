@@ -72,11 +72,12 @@
             }
         } 
     }
-    
-    
+     
 }
 
-
+.block_date{
+    @include m.txt-sm;
+}
 
 
 

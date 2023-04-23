@@ -4,28 +4,73 @@
 
 /* MODAL
 ---------------------------------------------------------------------------*/
+///modal common///
 
-
-//////////MODAL////////////
 
 .modal-box {
     position: fixed;
-    inset: 0;
+    inset: 50% auto auto 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: auto;
     margin: auto;
-    width: 512px;
-    height: 820px;
-    z-index: 110;
-    background-color: rgba(122, 69, 229, 0.6);
-    backdrop-filter: blur(6px);
-    border-radius: 10px;
-    overflow: scroll;
-    @include m.sp-size {
-        width: 90%;
-        height: 720px;
+    max-height: 90%;
+
+    
+    &.modal-box_basic{
+        width: 512px;
+        z-index: 1000;
+        backdrop-filter: blur(6px);
+        border-radius: 10px;
+        overflow-y:scroll;
+        @include m.sp-size {
+            width: 90%;
+        }
+        
+        &.modal-box_basic__sm{
+             width: 492px;
+            z-index: 1001;
+             overflow:hidden;
+             @include m.sp-size {
+                width: 85%;
+            }
+        }
+        
+        .modal_inner {
+            background-color: rgba(122, 69, 229, 0.6);
+        }
+        
+    }
+
+    
+    &.modal-box_edit {
+        width: 847px;
+        z-index: 1002;
+        background: rgba(0, 0, 0, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        
+       @include m.tablet-size {
+            width: 90%;
+            inset: inherit;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+        }
     }
     
-    &.modal-live-detail{
-        z-index: 111;
+    .close-btn {
+         z-index: 2;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 16px;
+        right: 16px;
+        background: url(../image/icons/icon-close.svg) no-repeat;
+        background-size: contain;
+        background-position: center;
     }
 
     .modal_inner {
@@ -37,30 +82,279 @@
             padding: 28px;
         }
     }
-
-    .close-btn {
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        top: 16px;
-        right: 16px;
-        background: url(../image/icons/icon-close.svg) no-repeat;
-        background-size: contain;
-        background-position: center;
+    
+    
+    ///scroll///
+    
+    &::-webkit-scrollbar {
+      width: 20px;
+        @include m.sp-size {
+                width:16px;
+            }
     }
 
-    .modal_subject {
-        font-size: 38px;
-        line-height: 44px;
-        font-weight: v.$font-weight-bold;
+    &::-webkit-scrollbar-track {
+      background: rgba(84, 32, 189, 0.6);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(217, 199, 255, 0.4);
+      border-radius: 10px;
+      }
+
+    
+    ///btn///
+    
+      .btn-area {
+        margin-top: 20px;
+          &.btns_container{
+              display: flex;
+              justify-content: center;
+              .btns{
+                  padding: 0 10px;
+              }
+          }
+    }
+    
+    .btn-modal-solid {
+        font-size: 13px;
+        line-height: 13px;
+        text-align: center;
+        padding: 6px 26px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: inline-block;
+        border-radius: 13px;
+        background: #181818;
+        color: v.$base-white-color;
+        text-decoration: none;
+        border:1px solid #fff;
+
+    }
+
+    .btn-retweet {
+        font-size: 21px;
+        text-align: center;
+        padding: 6px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: block;
+        width: 220px;
+        border-radius: 22px;
+        background: #181818;
+        color: v.$base-white-color;
+        text-decoration: none;
+        
+          @include m.sp-size {
+                 font-size: 14px;
+               width: 148px;
+            }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 6px;
+            background-image: url(../image/icons/icon-twitter_rt.svg);
+            background-size: contain;
+            
+              @include m.sp-size {
+                 width: 18px;
+                  height: 18px;
+            }
+        }
+    }
+    
+     ///form//
+    .form_container{
+        display: flex;
         @include m.sp-size {
-            font-size: 25px;
-            font-size: 32px;
+            flex-direction: column;
         }
         
-        .txt_subject{
-            font-size: 32px;
+        &.second{
+            margin-top: 16px;
         }
+        .item_label{
+             width:140px;
+            padding-right: 20px;
+            text-align: right;
+            @include m.sp-size {
+                text-align: left;
+                width:100%;
+                padding-right: 0;
+            }
+            
+            label{
+                display: inline-block;
+                padding: 5px 0;
+                font-size: 14px;
+                 @include m.sp-size {
+                    font-size: 13px;
+                     padding: 0;
+                }
+            }
+        }
+        .item_txt{
+             width: calc( 100% - 140px);
+            position: relative;
+             @include m.sp-size {
+                width:100%;
+            }
+        }
+        .count{
+            position: absolute;
+            right:10px;
+            bottom:11px;
+            font-size: 10px;
+            line-height: 10px;
+        }
+        
+        
+    .form-text {
+        font-size: 14px;
+        height: 32px;
+        width: 100%;
+        padding: 5px 10px;
+        border: none;
+        box-shadow: 0 0 0 1px #ccc inset;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.3);
+        @include m.sp-size {
+               font-size: 12px;
+            }
+        
+    }
+
+    .form-text:focus {
+        outline: 0;
+    }
+     textarea.form-text {
+           height: 88px;
+            display: block;
+          
+        }
+    }
+
+}
+
+
+
+
+////modal-box_edit////
+
+.modal-box_edit {
+    .main-img_area{
+        margin: 48px auto 0;
+        @include m.sp-size {
+           margin-top: 0;
+        }
+    }
+    
+    .main-img{
+        
+        position: relative;
+        width:100%;
+        height: 277px;
+        background-repeat: no-repeat;
+         @include m.sp-size {
+             height: 152px;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    .upload-btn{
+        position: absolute;
+        @include m.p-center;
+        border-radius: 50%;
+         background: url(../image/icons/icon-upload.svg) rgba(0, 0, 0, 0.8) no-repeat;
+        background-size:20px 20px;
+        background-position: center;
+        &.size-lg{
+             width:53px;
+            height: 53px;
+        }
+         &.size-sm{
+             width:44px;
+            height: 44px;
+              @include m.sp-size {
+                 width:37px;
+                 height: 37px;
+             }
+        }
+    }
+    
+    
+    .profile_thumbnail {
+        z-index: 3;
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        width: 100px;
+        text-align: center;
+
+        @include m.tablet-size {
+            bottom: -29px;
+            left: 17px;
+            width: 72px;
+        }
+
+        .img-circle {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #181818;
+            vertical-align: top;
+
+            @include m.tablet-size {
+                width: 72px;
+                height: 72px;
+                border-width: 2px;
+            }
+            
+              .upload-btn{
+            z-index: 2;
+        }
+
+            > img {
+                display: block;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translateY(-50%);
+                object-fit: contain;
+            }
+        }
+    }
+
+    
+}
+
+
+
+//////////modal-box_basic////////////
+
+
+.modal-box_basic {
+
+    .modal_subject {
+        font-size: 32px;
+        line-height: 1.3em;
+        font-weight: v.$font-weight-bold;
+        @include m.sp-size {
+             font-size: 25px;
+             
+        }
+        
+      
 
         .item-before-icon {
             &::before {
@@ -78,7 +372,8 @@
 
     .modal_name {
         font-weight: v.$font-weight-regular;
-        @include m.txt-xlg;
+        margin-top: 5px;
+        @include m.txt-lg;
 
         @include m.sp-size {
             @include m.txt-sm;
@@ -216,44 +511,7 @@
 
     }
 
-    .btn-area {
-        margin-top: 20px;
-    }
-
-    .btn-retweet {
-        font-size: 21px;
-        text-align: center;
-        padding: 6px;
-        box-sizing: border-box;
-        margin: 0 auto;
-        display: block;
-        width: 220px;
-        border-radius: 22px;
-        background: #181818;
-        color: v.$base-white-color;
-        
-          @include m.sp-size {
-                 font-size: 14px;
-               width: 148px;
-            }
-
-        &::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-            margin-right: 6px;
-            background-image: url(../image/icons/icon-twitter_rt.svg);
-            background-size: contain;
-            
-              @include m.sp-size {
-                 width: 18px;
-                  height: 18px;
-            }
-        }
-
-    }
+  
     
     //////LIVE/////////////
         
@@ -335,3 +593,7 @@
     }
     }
 }
+
+
+
+

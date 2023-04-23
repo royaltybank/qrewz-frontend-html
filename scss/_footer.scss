@@ -56,7 +56,7 @@ footer{
             
             @include m.sp-size {
                 padding:8px;
-               @include m.txt-md; 
+               @include m.txt-sm; 
                 margin-top: 20px;
             }
             

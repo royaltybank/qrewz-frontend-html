@@ -30,11 +30,6 @@
     }
 }
 
-@mixin smaller-than-1100{
-    @media screen and (max-width: 1100px) {
-        @content;
-    }
-}
 
 
 
@@ -65,35 +60,50 @@
 
 
 //typo//
-$xlg-txt: 18px;
-$lg-txt: 16px;
-$md-txt: 15px;
-$sm-txt: 12px;
 
-$xlg-txt-height: 25px;
-$lg-txt-height: 22px;
-$md-txt-height: 20px;
-$sm-txt-height: 15px;
+$xlg-txt: 22px;
+$lg-txt: 18px;
+$body-txt: 16px;
+$md-txt: 15px;
+$sm-txt: 13px;
+$xsm-txt: 11px;
+
+$regular-line-height: 1.5em;
+
+
+
 
 @mixin txt-xlg{
     font-size: $xlg-txt;
-    line-height: $xlg-txt-height;
+     line-height: 1.5em;
 }
+
 
 
 @mixin txt-lg{
     font-size: $lg-txt;
-    line-height: $lg-txt-height;
+     line-height: 1.5em;
 }
+
+@mixin txt-body{
+    font-size: $body-txt;
+    line-height: 1.6em;
+}
+
 
 @mixin txt-md{
      font-size: $md-txt;
-    line-height: $md-txt-height;
+    line-height: 1.5em;
 }
 
 @mixin txt-sm{
     font-size: $sm-txt;
-    line-height: $sm-txt-height;
+     line-height: 1.5em;
+}
+
+@mixin txt-xsm{
+    font-size: $xsm-txt;
+    line-height: 1.5em;
 }
 
 
