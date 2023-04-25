@@ -265,6 +265,7 @@
          @include m.sp-size {
              height: 152px;
             border-radius: 20px 20px 0 0;
+            overflow: hidden;
         }
     }
     .upload-btn{
@@ -298,7 +299,7 @@
         text-align: center;
 
         @include m.tablet-size {
-            bottom: -29px;
+/*            bottom: -29px;*/
             left: 17px;
             width: 72px;
         }
