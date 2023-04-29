@@ -1239,7 +1239,7 @@ a.url-link {
     width: 25%;
   }
 }
-.mybadge-container li > a {
+.mybadge-container > li > a {
   text-decoration: none;
 }
 .mybadge-container .badge {
@@ -1696,7 +1696,7 @@ section.section_works .credit_container {
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   border-radius: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 @media screen and (max-width: 600px) {
   .modal-box.modal-box_basic {
@@ -1937,6 +1937,7 @@ section.section_works .credit_container {
   .modal-box_edit .main-img {
     height: 152px;
     border-radius: 20px 20px 0 0;
+    overflow: hidden;
   }
 }
 .modal-box_edit .upload-btn {
@@ -1975,7 +1976,7 @@ section.section_works .credit_container {
 }
 @media screen and (max-width: 900px) {
   .modal-box_edit .profile_thumbnail {
-    bottom: -29px;
+    /*            bottom: -29px;*/
     left: 17px;
     width: 72px;
   }
