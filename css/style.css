@@ -603,19 +603,47 @@ img.arrow-close {
   z-index: 10;
 }
 
+.badge-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+}
+@media screen and (max-width: 600px) {
+  .badge-status {
+    padding: 0 5px;
+  }
+}
+.badge-status .status_icon img {
+  width: 22px;
+  height: 22px;
+}
+@media screen and (max-width: 600px) {
+  .badge-status .status_icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .status_lv {
-  font-size: 9px;
+  font-size: 8px;
   color: #fff;
 }
 .status_lv .num {
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 22px;
+  line-height: 22px;
   color: #63FFEC;
 }
 @media screen and (max-width: 600px) {
   .status_lv .num {
-    font-size: 19px;
-    line-height: 19px;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
@@ -1220,24 +1248,6 @@ a.url-link {
 @media screen and (max-width: 600px) {
   .mybadge-container .badge {
     padding: 8px;
-  }
-}
-.mybadge-container .badge-status {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.mybadge-container .badge-status .status_icon img {
-  width: 26px;
-  height: 26px;
-}
-@media screen and (max-width: 600px) {
-  .mybadge-container .badge-status .status_icon img {
-    width: 19px;
-    height: 19px;
   }
 }
 

@@ -274,25 +274,7 @@ a.url-link {
 
 
     
-    .badge-status{
-        display: flex;
-        justify-content: space-between;
-        
-        .status_icon{
-         
-            img{
-                width:26px;
-                height: 26px;
-                @include m.sp-size {
-                width:19px;
-                height: 19px;
-                }
-            }
-           
-        }
-        
-       
-    }
+  
 
 
 }
