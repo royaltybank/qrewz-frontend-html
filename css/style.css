@@ -1231,11 +1231,11 @@ a.url-link {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.mybadge-container li {
+.mybadge-container > li {
   width: 140px;
 }
 @media screen and (max-width: 600px) {
-  .mybadge-container li {
+  .mybadge-container > li {
     width: 25%;
   }
 }

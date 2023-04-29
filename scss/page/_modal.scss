@@ -21,7 +21,7 @@
         z-index: 1000;
         backdrop-filter: blur(6px);
         border-radius: 10px;
-        overflow-y:scroll;
+        overflow-y:auto;
         @include m.sp-size {
             width: 90%;
         }
@@ -265,6 +265,7 @@
          @include m.sp-size {
              height: 152px;
             border-radius: 20px 20px 0 0;
+            overflow: hidden;
         }
     }
     .upload-btn{
@@ -298,7 +299,7 @@
         text-align: center;
 
         @include m.tablet-size {
-            bottom: -29px;
+/*            bottom: -29px;*/
             left: 17px;
             width: 72px;
         }
