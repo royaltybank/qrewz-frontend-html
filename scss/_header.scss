@@ -9,6 +9,10 @@ header {
     z-index: 99;
     height: v.$header-height;
     
+    @include m.tablet-size{
+        height: v.$header-height-sp;
+    }
+    
     .header__bg{
         position: relative;
          &:before{
@@ -33,24 +37,31 @@ header {
             justify-content: flex-end;	   
              height: v.$header-height;
             position: relative;
-         
         
          @media screen and (max-width: 1340px) {
                  max-width: 100%; 
                  width: 100%; 
             }
+         @include m.tablet-size{
+        height: v.$header-height-sp;
+    }
         
     
      }
     
     .header-logo{
         position: absolute;
-        width: 126px;
-        height: 45px;
+        width: 160px;
+        height: 42px;
         left: 0;
         z-index: 101;
         @include m.tablet-size {
              @include m.p-center;
+        }
+        
+         @include m.sp-size {
+              width: 110px;
+             height:28.875px;
         }
         
         a{
@@ -129,6 +140,8 @@ header {
 
 
 
+
+
 //////////////////////////////////////////
 /*メニューのデザイン
 ---------------------------------------------------------------------------*/
@@ -150,7 +163,6 @@ header {
             }
             
             
-            
              a{
                 color: v.$base-white-color;
                  text-decoration: none;
@@ -160,12 +172,45 @@ header {
                 width:22px;
                 margin: 0 auto;
             }
-            
 
-           
         }
     }
 }
+
+///////pc-hover動作///
+
+#menubar{
+       @include m.pc-size {
+    
+    li {
+      overflow: hidden;
+        &:hover a {
+          transform: translateY(-40px);
+             -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+        }
+
+    }
+    a.nav-hover{
+     position: relative;
+      display: inline-block;
+        &:after {
+          position: absolute;
+           top: 40px;
+          left: 0;
+        }
+
+        &#menu_projects:after{
+             content: "PROJECTS"; 
+        }
+        &#menu_icon-question:after{
+            content: url("../image/icons/icon-question.svg");
+        }
+
+    }
+    }
+}
+
 
 
 .login-img-circle {
@@ -176,16 +221,25 @@ header {
         width: 38px;
         height: 38px;
         vertical-align: top;
+        z-index:1;//
 
         > img {
-            display: block;
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            height: 100%;
-            transform: translateY(-50%);
-            object-fit: cover;
+             width: 38px;
+            height: 38px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition:all .2s ease;
+            transition:all .2s ease;
+            transition: transform .7s;
+           
         }
+    
+    &:hover{
+        img{
+            -webkit-transform:scale(1.1);
+	       transform:scale(1.1);
+        }
+    }
     }
 
 

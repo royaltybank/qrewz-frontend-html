@@ -31,16 +31,17 @@
     
     .projects_thumb_link{
         display: block;
+        overflow: hidden;
+        border-radius: 5px;
     }
     
     .projects_thumb{
          width:316px;
         height: 310px;
         position: relative;
-        border-radius: 5px;
         background-repeat: no-repeat;
             background-size: 50%;
-        
+        transition: transform .7s;
         
         
         @include m.sp-size {
@@ -69,8 +70,15 @@
             z-index: 2;
             img{
                 width:100%;
+                 
             }
         } 
+    }
+    
+      .projects_thumb_link:hover{
+        .projects_thumb{
+            transform: scale(1.1); 
+          }
     }
      
 }
