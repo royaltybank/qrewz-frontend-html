@@ -148,6 +148,10 @@ h6 {
     &.icon-only {
         li {
             margin: 0 5px;
+            
+            &.ttl{
+                margin: 0 7px 0 0 ;
+            }
         }
     }
 }
@@ -244,6 +248,7 @@ h6 {
 .donate-icon-btn{
     display: inline-block;
     font-size: 15px;
+    width:113px;
     height: 30px;
     color: v.$base-white-color;
     text-decoration: none;
@@ -373,21 +378,23 @@ h6 {
 //表示nav///
 
 .switch-container {
+    display: flex;
+    justify-content: flex-end;
 
     .switch-list {
-        margin: 0 0 0 auto;
+        //margin: 0 0 0 auto;
         display: block;
-        width: 34px;
-        height: 34px;
+        width: 28px;
+        height: 28px;
         background-image: url(../image/icons/icon-list.svg);
         background-size: contain;
     }
 
     .switch-grid {
-        margin: 0 0 0 auto;
+        //margin: 0 0 0 auto;
         display: block;
-        width: 34px;
-        height: 34px;
+        width: 28px;
+        height: 28px;
         background-image: url(../image/icons/icon-grid.svg);
         background-size: contain;
     }

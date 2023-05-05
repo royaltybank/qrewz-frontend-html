@@ -36,6 +36,10 @@
 
     .block_txt {
         margin-left: 70px;
+        
+         @media screen and (max-width: 1100px) {
+             margin-left: 30px;
+            }
 
         @include m.sp-size {
             margin-left: 0;
@@ -48,7 +52,7 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;//
     width: 360px;
     height: 360px;
     vertical-align: top;
@@ -91,9 +95,9 @@
 .detail-cover_sns {
     margin-top: 30px;
      @include m.txt-md;
-    display: flex;
+     display: flex;
 
-    @include m.sp-size {
+    @include m.tablet-size {
         flex-direction: column;
     }
 
@@ -101,15 +105,15 @@
             margin-left: 60px;
         text-align: left;
         
+         @media screen and (max-width: 1100px) {
+             margin-left: 20px;
+            }
+        
         @include m.tablet-size{
-            margin-left: 20px;
+            margin-left: 0;
+                margin-top: 22px;
         }
         
-
-            @include m.sp-size {
-                margin-left: 0;
-                margin-top: 22px;
-            }
         }
    
 }
@@ -121,8 +125,13 @@
 
 
 .section-cach {
-
+    margin-top: 40px;
     margin-bottom: 36px;
+     @include m.sp-size{
+            @include m.txt-sm;
+         letter-spacing: 0.05em;
+        }
+    
 }
 
 .action-token_container {
