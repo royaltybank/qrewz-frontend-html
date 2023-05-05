@@ -32,7 +32,7 @@
     .projects_thumb_link{
         display: block;
         overflow: hidden;
-        border-radius: 5px;
+      border-radius: 5px;
     }
     
     .projects_thumb{
@@ -42,6 +42,7 @@
         background-repeat: no-repeat;
             background-size: 50%;
         transition: transform .7s;
+        border-radius: 5px;
         
         
         @include m.sp-size {
@@ -57,6 +58,7 @@
             position: absolute;
             z-index: 1;
             background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(0,0,0,0.9) 100%);
+             border-radius: 5px;
         }
         
         .projects_thumb_ttl{
