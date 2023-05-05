@@ -203,6 +203,18 @@ header {
         &#menu_projects:after{
              content: "PROJECTS"; 
         }
+        &#menu_login:after{
+            content: "LOGIN"; 
+        }
+        &#menu_signup:after{
+            content: "SIGN UP"; 
+        }
+        &#menu_mypage:after{
+            content: "MY PAGE"; 
+        }
+        &#menu_icon-logout:after{
+            content: url("../image/icons/icon-logout.svg"); 
+        }
         &#menu_icon-question:after{
             content: url("../image/icons/icon-question.svg");
         }
