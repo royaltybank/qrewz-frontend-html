@@ -116,10 +116,10 @@ body {
 
 /*main*/
 main{
-    padding: 110px 0;
+    padding: 110px 0 55px;
     
       @include m.tablet-size {
-        padding: v.$header-height-sp 0;
+        padding: v.$header-height-sp 0 35px;
     }
 }
 
