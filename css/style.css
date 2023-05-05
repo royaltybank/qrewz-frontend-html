@@ -594,6 +594,11 @@ img.arrow-close {
           transform: scale(1, -1);
 }
 
+.radius-mask {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
 .switch-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -811,6 +816,18 @@ header .header-logo img {
   }
   #menubar a.nav-hover#menu_projects:after {
     content: "PROJECTS";
+  }
+  #menubar a.nav-hover#menu_login:after {
+    content: "LOGIN";
+  }
+  #menubar a.nav-hover#menu_signup:after {
+    content: "SIGN UP";
+  }
+  #menubar a.nav-hover#menu_mypage:after {
+    content: "MY PAGE";
+  }
+  #menubar a.nav-hover#menu_icon-logout:after {
+    content: url("../image/icons/icon-logout.svg");
   }
   #menubar a.nav-hover#menu_icon-question:after {
     content: url("../image/icons/icon-question.svg");
