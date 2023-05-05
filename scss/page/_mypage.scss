@@ -261,6 +261,16 @@ a.url-link {
         
         >a{
             text-decoration: none;
+            overflow: hidden;
+            img.polygon-mask_img{
+                 transition: transform .7s;
+            }
+            &:hover{
+               img.polygon-mask_img{
+                   transform: scale(1.15);
+                   
+                }
+            }
         }
        
     }
@@ -273,19 +283,58 @@ a.url-link {
     }
 
 
-    
-    .badge-status{
+}
+
+
+    ///バッジ6角マスク//
+    .polygon-mask {
+        mask-image: url("../image/polygon.svg");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: url("../image/polygon.svg");
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        
+        
+            
+    }
+
+    .badge-area {
+        position: relative;
+     
+        .project-box {
+            border: v.$base-black-color 3px solid;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+     
+        }
+    }
+
+
+    //my badge バッジステイタス//
+  .badge-status{
         display: flex;
         justify-content: space-between;
+      align-items: center;
+      padding:0 10px;
+       @include m.sp-size {
+           padding: 0 5px;
+      }
         
         .status_icon{
          
             img{
-                width:26px;
-                height: 26px;
+                width:22px;
+                height: 22px;
                 @include m.sp-size {
-                width:19px;
-                height: 19px;
+                width:16px;
+                height: 16px;
                 }
             }
            
@@ -293,9 +342,22 @@ a.url-link {
         
        
     }
+    .status_lv {
+        font-size: 8px;
+        color: v.$base-white-color;
 
+        .num {
+            font-size: 22px;
+            line-height: 22px;
+            color: v.$tertiary-color;
 
-}
+            @include m.sp-size {
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+
 
 
 

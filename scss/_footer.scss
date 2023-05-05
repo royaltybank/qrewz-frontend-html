@@ -16,23 +16,26 @@ footer{
         padding: 10px;
         
         @include m.sp-size {
+            max-width: 100%;
             width: 100%;
             flex-direction: column;
             justify-content: inherit;
+            align-items:stretch;
+            
         }
     }
     
     .footer-logo__block{
         text-align: center;
+         @include m.sp-size {
+             text-align: left;
+        }
     }
     
     .footer-logo{
         width: 126px;
         height: 45px;
-        
-        @include m.tablet-size {
-           
-        }
+
         
         a{
             display: block;
@@ -43,8 +46,12 @@ footer{
         }   
     }
     
-    .footer_copy{
+    .footer-copy{
         font-family: "Raleway", sans-serif;
+          @include m.sp-size {
+              @include m.txt-sm;
+              margin-left: 10px;
+        }
     }
     
     .footer__menu{
@@ -57,7 +64,7 @@ footer{
             @include m.sp-size {
                 padding:8px;
                @include m.txt-sm; 
-                margin-top: 20px;
+                    margin: 10px auto;
             }
             
             a{

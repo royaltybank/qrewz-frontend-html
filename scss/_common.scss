@@ -373,50 +373,6 @@ h6 {
         overflow: hidden;
     }
 
-    ///バッジ6角マスク//
-    .polygon-mask {
-        mask-image: url("../image/polygon.svg");
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: contain;
-        -webkit-mask-image: url("../image/polygon.svg");
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-position: center;
-        -webkit-mask-size: contain;
-    }
-
-    .badge-area {
-        position: relative;
-
-        .project-box {
-            border: v.$base-black-color 3px solid;
-            width: 32px;
-            height: 32px;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: 10;
-        }
-    }
-
-
-    //バッジステイタスレベル//
-    .status_lv {
-        font-size: 9px;
-        color: v.$base-white-color;
-
-        .num {
-            font-size: 25px;
-            line-height: 25px;
-            color: v.$tertiary-color;
-
-            @include m.sp-size {
-                font-size: 19px;
-                line-height: 19px;
-            }
-        }
-    }
-
 
 //表示nav///
 

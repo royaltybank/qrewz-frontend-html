@@ -100,6 +100,11 @@
     .donate-container {
             margin-left: 60px;
         text-align: left;
+        
+        @include m.tablet-size{
+            margin-left: 20px;
+        }
+        
 
             @include m.sp-size {
                 margin-left: 0;
@@ -139,11 +144,17 @@
 
 }
 
+.action-token_wrap{
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
 .action-token {
     width: 192px;
     height: 192px;
     position: relative;
-    border-radius: 20px;
+    transition: transform .7s;
 
     @include m.sp-size {
         width: 136px;
@@ -185,6 +196,12 @@
             justify-content: center;
         }
 
+    }
+}
+
+.action-token_wrap:hover{
+    .action-token {
+	   transform: scale(1.1);
     }
 }
 
@@ -346,8 +363,8 @@ section.section_works {
           
     }
 
- 
-    
-    
+    }
 
-}
+
+
+
