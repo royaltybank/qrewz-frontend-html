@@ -78,6 +78,17 @@ h6 {
     margin-top: 10px;
 }
 
+////section-cach////
+
+.section-cach {
+    margin-top: 40px;
+    margin-bottom: 36px;
+     @include m.sp-size{
+            @include m.txt-sm;
+         letter-spacing: 0.05em;
+        }
+    
+}
 
 
 ////status PARTS////

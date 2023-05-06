@@ -349,6 +349,18 @@ h6 {
   margin-top: 10px;
 }
 
+.section-cach {
+  margin-top: 40px;
+  margin-bottom: 36px;
+}
+@media screen and (max-width: 600px) {
+  .section-cach {
+    font-size: 13px;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+  }
+}
+
 .status-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -696,7 +708,7 @@ header .header__inner {
 header .header-logo {
   position: absolute;
   width: 160px;
-  height: 42px;
+  height: 46px;
   left: 0;
   z-index: 101;
 }
@@ -711,8 +723,8 @@ header .header-logo {
 }
 @media screen and (max-width: 600px) {
   header .header-logo {
-    width: 110px;
-    height: 28.875px;
+    width: 112px;
+    height: 32.2px;
   }
 }
 header .header-logo a {
@@ -982,11 +994,18 @@ footer .footer-logo__block {
 @media screen and (max-width: 600px) {
   footer .footer-logo__block {
     text-align: left;
+    margin-left: 10px;
   }
 }
 footer .footer-logo {
   width: 126px;
-  height: 45px;
+  height: 46px;
+}
+@media screen and (max-width: 600px) {
+  footer .footer-logo {
+    width: 112px;
+    height: 64.4x;
+  }
 }
 footer .footer-logo a {
   display: block;
@@ -1001,7 +1020,6 @@ footer .footer-copy {
   footer .footer-copy {
     font-size: 13px;
     line-height: 1.5em;
-    margin-left: 10px;
   }
 }
 footer .footer__menu {
@@ -1056,6 +1074,7 @@ section.mybadge-section .contents-container {
 }
 .cover-area .cover-img {
   width: 100%;
+  border-radius: 30px 30px 0 0;
 }
 .cover-area .shade {
   position: absolute;
@@ -1459,6 +1478,38 @@ a.url-link {
 
 /* PROJECT=DETAIL PAGE
 ---------------------------------------------------------------------------*/
+.header-section {
+  padding: 60px 80px;
+}
+@media screen and (max-width: 900px) {
+  .header-section {
+    padding: 30px 40px;
+  }
+}
+.header-section .section-cach {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+  .header-section .section-cach {
+    margin-top: 20px;
+  }
+}
+
+.heder-section_logo {
+  text-align: center;
+}
+.heder-section_logo img {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+}
+@media screen and (max-width: 600px) {
+  .heder-section_logo img {
+    width: 112px;
+    height: 112px;
+  }
+}
+
 .contents-section {
   margin-top: 30px;
 }
@@ -1526,17 +1577,6 @@ a.url-link {
     height: 200px;
   }
 }
-.detail-cover_thumbnail > img {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 
 @media screen and (max-width: 600px) {
   .detail-cover_ttl {
@@ -1552,6 +1592,21 @@ a.url-link {
   line-height: 1.5em;
   position: relative;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .detail-cover_info {
+    font-size: 13px;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+  }
+}
+.detail-cover_info .action-btn {
+  bottom: 4px;
+}
+@media screen and (max-width: 600px) {
+  .detail-cover_info .action-btn {
+    bottom: 4px;
+  }
 }
 
 .detail-cover_sns {
@@ -1583,18 +1638,6 @@ a.url-link {
   .detail-cover_sns .donate-container {
     margin-left: 0;
     margin-top: 22px;
-  }
-}
-
-.section-cach {
-  margin-top: 40px;
-  margin-bottom: 36px;
-}
-@media screen and (max-width: 600px) {
-  .section-cach {
-    font-size: 13px;
-    line-height: 1.5em;
-    letter-spacing: 0.05em;
   }
 }
 
@@ -2309,7 +2352,6 @@ section.section_works .credit_container {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
   width: 115px;
   height: 115px;
   vertical-align: top;
@@ -2333,15 +2375,7 @@ section.section_works .credit_container {
   }
 }
 .modal-box_basic .action-token_thumb > img {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 20px;
 }
 .modal-box_basic .detail-txt {
   position: relative;
