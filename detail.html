@@ -536,30 +536,43 @@ Composer/Vocal/Guitar：Nanao、Drums：Youli、Piano：Chioの3名から構成�
             </div>
         </footer>
         <!-- //footer-->
+        <!-- bottom-nav-->
+        <div class="bottom-nav">
+          <div class="item_wrap">
+            <div class="item">
+              <a class="icon-block" href="#">
+                  <img class="icon" src="./image/icons/icon-home.svg">
+                    <div class="icon_txt">Discover</div>
+                </a>
+              </div>
+            <div class="item" href="#">
+                 <a class="icon-block" href="#">
+                  <img class="icon img-circle" src="./image/mypage/prof.png">
+                    <div class="icon_txt">My Page</div>
+                </a>
+              
+            </div>
+            </div> 
+        </div>
+        <!-- //bottom-nav-->
     </div>
 
     <!--jQueryの読み込み-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--このテンプレート専用のスクリプト-->
     <script src="js/main.js"></script>
-     <!--Live詳細を押したとき（リアルライブ）（ポップアップ）-->
-    <div class="modal-box modal-box_basic modal-box_basic__sm" style="display: none;">
+    <!--Live詳細を押したとき（Youtube）（ポップアップ）-->
+    <div class="modal-box modal-box_basic modal-box_basic__sm" style="display:;">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
-            <div class="modal_subject">
-23.01.01  渋谷ライブ（朝）
-               
+             <div class="modal_subject subject_sm">
+                <div class="item-before-icon live">YouTube生配信</div>
             </div>
             <div class="modal_name">Teary Planet</div>
             <div class="modal_detail__container">
-                    <div class="block_thumb">
-                    <div class="badge-area">
-                       <div class="action-token_thumb">
-                         <img src="./image/projects/artist_05.png" alt="">
-                     </div>
-                                </div>
-                        
-                </div>   
+                     <div class="block_square-thumb">
+                    <img src="./image/projects/artist_05.png" class="square-img" alt="">
+                </div>
                 
 
                 <div class="block_txt">
@@ -568,9 +581,9 @@ Composer/Vocal/Guitar：Nanao、Drums：Youli、Piano：Chioの3名から構成�
                         <li class="item item_reward">ライブ優待席</li>
                         <li> <a href="#"><img src="./image/icons/icon-question.svg"></a></li>
                     </ul>
-                    <div class="detail-txt">
-                    <div>アクション実行方法</div>
-ライブ会場内やオンライン生配信内で提示される二次元バーコードを読み取る
+                   <div class="detail-txt">
+                    <div class="detail-txt_ttl">アクション実行方法</div>
+<p>配信内で表示される二次元バーコードを読み取る</p>
                         
                          <a class="action-btn" href="#">  
                     <!--開く-->
@@ -580,32 +593,23 @@ Composer/Vocal/Guitar：Nanao、Drums：Youli、Piano：Chioの3名から構成�
                 </a>
                     </div>
 
-                   
-
-                   
                 </div>
             </div>
             
             
         </div>
     </div>
-    <!--ポップアップ Liveバッジ-->
-    <div class="modal-box modal-box_basic" style="display: none;">
+     <!--Live詳細を押したとき（リアルライブ）（ポップアップ）-->
+    <div class="modal-box modal-box_basic modal-box_basic__sm" style="display:none;">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
-            <div class="modal_subject">
-
-                <div class="item-before-icon live">Live</div>
+             <div class="modal_subject subject_sm">
+                <div class="item-before-icon live">23.01.01  渋谷ライブ（朝）</div>
             </div>
             <div class="modal_name">Teary Planet</div>
             <div class="modal_detail__container">
-                <div class="block_thumb">
-                    <div class="badge-area">
-                       <div class="action-token_thumb">
-                         <img src="./image/projects/artist_05.png" alt="">
-                     </div>
-                                </div>
-                        
+                     <div class="block_square-thumb">
+                    <img src="./image/projects/artist_05.png" class="square-img" alt="">
                 </div>
                 
 
@@ -615,33 +619,83 @@ Composer/Vocal/Guitar：Nanao、Drums：Youli、Piano：Chioの3名から構成�
                         <li class="item item_reward">ライブ優待席</li>
                         <li> <a href="#"><img src="./image/icons/icon-question.svg"></a></li>
                     </ul>
+                   <div class="detail-txt">
+                    <div class="detail-txt_ttl">アクション実行方法</div>
+<p>ライブ会場内やオンライン生配信内で提示される二次元バーコードを読み取る</p>
+                        
+                         <a class="action-btn" href="#">  
+                    <!--開く-->
+                    <img src="./image/icons/icon-under.svg" class="arrow-open">
+                    <!--閉じる-->
+                    <img src="./image/icons/icon-under.svg" class="arrow-close" style="display:none;">
+                </a>
+                    </div>
 
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <!--ポップアップ Liveバッジ-->
+    <div class="modal-box modal-box_basic" style="display: ">
+        <a class="close-btn" href="#"></a>
+        <div class="modal_inner">
+            <div class="modal_subject">
+
+                <div class="item-before-icon live">Live</div>
+            </div>
+            <div class="modal_name">Teary Planet</div>
+            <div class="modal_detail__container">
+                <div class="block_square-thumb">
+                    <img src="./image/projects/artist_05.png" class="square-img" alt="">
+                </div>
+                
+
+                <div class="block_txt">
+                    <ul class="status-container icon_before mt5">
+                        <li class="item item_coin">可能性あり</li>
+                        <li class="item item_reward">ライブ優待席</li>
+                        <li> <a href="#"><img src="./image/icons/icon-question.svg"></a></li>
+                    </ul>
+                    
+                     <div class="detail-txt">
+                    <div class="detail-txt_ttl">アクション実行方法</div>
+<p>QRコードを読み込む</p>
+                        
+                         <!--
+                         <a class="action-btn" href="#">
+                         
+                             <img src="./image/icons/icon-under.svg" class="arrow-open">
+                             
+                             <img src="./image/icons/icon-under.svg" class="arrow-close" style="display:none;">
+                         </a>
+                    </div>
+                        -->
+                    </div>
                    
 
                 </div>
             </div>
-            <a class="modal_action" href="#">
-               QRコードを読み込む       
-            </a>
-            <div class="live-block__container-block">
+   
+        
+             <div class="live-block_ttl mt20">ライブ一覧</div>
+            <div class="live-block-detailpage">
                 
                 <!--1-->
-                <div class="live-block__container">
+                <div class="live-block">
                 <div class="block_thumb">
-                      <div class="action-token_thumb thumb_sm">
-                         <img src="./image/projects/artist_05.png" alt="">
-                     </div>
+                         <img class="square-img" src="./image/projects/artist_05.png" alt="">
                        
                 </div>
 
                 <div class="block_txt">
                     <div class="live_ttl__single">23.05.01  渋谷ライブ</div>
-                    
                 </div>
                 </div>
                 
                 <!--2-->
-                  <div class="live-block__container">
+                  <div class="live-block">
                 <div class="block_thumb">
                       <div class="action-token_thumb thumb_sm">
                          <img src="./image/projects/artist_05.png" alt="">
@@ -654,76 +708,12 @@ Composer/Vocal/Guitar：Nanao、Drums：Youli、Piano：Chioの3名から構成�
                     
                 </div>
                 </div>
-                
-                
-                
+
             </div>
+   
         </div>
     </div>
-     <!--ポップアップ Twitter RT-->
-    <div class="modal-box modal-box_basic" style="display:none">
-        <a class="close-btn" href="#"></a>
-        <div class="modal_inner">
-            <div class="modal_subject">
-
-                <div class="item-before-icon twitter_rt">Twitter RT</div>
-            </div>
-<!--            <div class="modal_name">Teary Planet</div>-->
-            <div class="modal_detail__container">
-                <div class="block_thumb">
-                    <div class="action-token_thumb">
-                         <img src="./image/projects/artist_05.png" alt="">
-                     </div>
-                     
-                </div>
-                
-
-                <div class="block_txt">
-                    <ul class="status-container icon_before mt5">
-                        <li class="item item_coin">可能性あり</li>
-                        <li class="item item_reward">ライブ優待席</li>
-                        <li> <a href="#"><img src="./image/icons/icon-question.svg"></a></li>
-                    </ul>
-
-                </div>
-            </div>
-           
-
-
-            <div class="modal_action">
-                指定のツイートを引用リツイートする
-                <a class="action-btn" href="#">  
-                    <!--開く-->
-                    <img src="./image/icons/icon-under.svg" class="arrow-open">
-                    <!--閉じる-->
-                    <img src="./image/icons/icon-under.svg" class="arrow-close" style="display:none;">
-                </a>
-                <!--仮ボタン開閉スペース-->
-                <div class="open-block" style="">
-                     <ol class="modal_action__num-list">
-                    <li>この画面下にある「Retweet」ボタンを押す</li>
-                    <li>タグが付いた状態のTwitterリツイート投稿画面が開くので、コメントを追加して投稿する</li>
-                    <li>完了！マイページにて実績バッジを確認しよう！</li>
-                </ol>
-                </div>
-                <!--//仮ボタン開閉スペース-->
-            </div>
-
-            <dl class="tweet-block">
-                <dt>Your Latest Contribution:</dt>
-                <dd></dd>
-                <dt>Current Tweet:</dt>
-                <dd></dd>
-            </dl>
-
-
-            <div class="btn-area">
-                <a class="btn-retweet" href="#">Retweetする</a>
-
-            </div>
-
-        </div>
-    </div>
+ 
 
 </body>
 

@@ -60,7 +60,7 @@
 
 
 //typo//
-
+$x2lg-txt: 24px;
 $xlg-txt: 22px;
 $lg-txt: 18px;
 $body-txt: 16px;
@@ -70,6 +70,10 @@ $xsm-txt: 11px;
 
 $regular-line-height: 1.5em;
 
+@mixin txt-x2lg{
+    font-size: $x2lg-txt;
+     line-height: 1.5em;
+}
 
 
 

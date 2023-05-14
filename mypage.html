@@ -317,6 +317,26 @@
             </div>
         </footer>
         <!-- //footer-->
+        
+        <!-- bottom-nav-->
+        <div class="bottom-nav">
+          <div class="item_wrap">
+            <div class="item">
+                  <a class="icon-block" href="#">
+                  <img class="icon" src="./image/icons/icon-home.svg">
+                    <div class="icon_txt">Discover</div>
+                </a>
+              </div>
+            <div class="item">
+                 <div class="icon-block">
+                  <img class="icon img-circle active" src="./image/mypage/prof.png">
+                    <div class="icon_txt active">My Page</div>
+                </div>
+              
+            </div>
+            </div> 
+        </div>
+        <!-- //bottom-nav-->
     </div>
 
     <!--jQueryの読み込み-->
@@ -324,7 +344,7 @@
     <!--このテンプレート専用のスクリプト-->
     <script src="js/main.js"></script>
     
-    <!--プロフィール編集-->
+    <!--ポップアップ プロフィール編集-->
     <div class="modal-box modal-box_edit" style="display:none">
         <a class="close-btn" href="#"></a>
         <div class="main-img_area">
@@ -349,7 +369,7 @@
              </div>
         </div>
             
-              <div class="form_container second">         
+              <div class="form_container">         
             <div class="item_label">
              <label for="profile">プロフィール</label>
             </div>
@@ -359,6 +379,37 @@
                 </textarea>
            
              </div>
+        </div>
+            
+            <div class="form_container">         
+            <div class="item_label">
+             <label for="profile">公開設定</label>
+            </div>
+                 <div class="item_txt">
+                     
+                <div class="toggle-block">
+                <span class="toggle-block_name">プロフィール</span>
+                <label class="setting-toggle-button">
+                    <input type="checkbox"/>
+                </label>
+                </div>
+                
+                 <div class="toggle-block">
+                 <div class="toggle-block_question"><img src="/image/icons/icon-question.svg"></div>
+                <div class="toggle-block_txt">プロジェクト毎のトップコントリビューターランキングに入った際、他のユーザはアイコンをクリックしてあなたのマイページを見ることができます。</div>
+                </div>
+                
+                <div class="toggle-block">
+                <span class="toggle-block_name">SNS投稿記事</span>
+                <label class="setting-toggle-button">
+                    <input type="checkbox"/>
+                </label>
+                </div>
+                <div class="toggle-block">
+                 <div class="toggle-block_question"><img src="/image/icons/icon-question.svg"></div>
+                <div class="toggle-block_txt">他のユーザがあなたのページに記載されているトークン詳細を見た際、あなたがSNSに投稿した内容</div>
+                </div>
+                </div>
         </div>
       
             
@@ -376,13 +427,11 @@
     </div>
     
      <!--ポップアップ Live詳細-->
-    <div class="modal-box modal-box_basic modal-box_basic__sm" style="display:none;">
+    <div class="modal-box modal-box_basic modal-box_basic__sm" style="display:;">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
-            <div class="modal_subject">
-                
-23.01.01  渋谷ライブ（朝）
-             
+            <div class="modal_subject subject_sm">
+                <div class="item-before-icon live">23.01.01  渋谷ライブ（朝）</div>
             </div>
             <div class="modal_name">Teary Planet</div>
             <div class="modal_detail__container">
@@ -395,12 +444,8 @@
                                    <img src="./image/projects/artist_05.png" alt="">
                                  </figure>
                                 </div>
-                   
-                  <div class="badge-status">
-                                    <div class="status_icon">
-                                        <!--
-                                        <img src="./image/icons/icon-live.svg">-->
-                      </div>
+                    <div class="badge-status">
+                                    <div class="status_icon"><img src="./image/icons/icon-live.svg"></div>
                                     <div class="status_lv">lv.<span class="num">40</span></div>
                                 </div>  
                 </div>
@@ -418,33 +463,31 @@
                         <li class="item item_start">2023.03.036</li>
                         <li class="item item_reload">2023.03.036</li>
                     </ul>
-
-                    <div class="modal_matic">
-                        <span class="matic_num">3,500</span>
-                        <span class="matic_unit">Matic</span>
-
-                    </div>
-                </div>
-            </div>
-             <div class="modal_action">
-                ライブ会場にてQRコードを読み込む
-                <a class="action-btn" href="#">  
+                      <div class="detail-txt">
+                    <div class="detail-txt_ttl">アクション実行方法</div>
+<p>ライブ会場内やオンライン生配信内で提示される二次元バーコードを読み取る二次元バーコードを読み取る</p>
+                        
+                         <a class="action-btn" href="#">  
                     <!--開く-->
                     <img src="./image/icons/icon-under.svg" class="arrow-open">
                     <!--閉じる-->
                     <img src="./image/icons/icon-under.svg" class="arrow-close" style="display:none;">
                 </a>
-                <!--仮ボタン開閉スペース-->
-                <div class="open-block" style="display:none;">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                    </div>
+
+                    <div class="modal_matic">
+                        <span class="matic_num">50</span>
+                        <span class="matic_unit">Matic</span>
+
+                    </div>
                 </div>
-                <!--//仮ボタン開閉スペース-->
             </div>
             
         </div>
     </div>
-    <!--ポップアップ Liveバッジ-->
-    <div class="modal-box modal-box_basic" style="display:none;">
+    
+    <!--ポップアップ Live-->
+    <div class="modal-box modal-box_basic" style="display:;">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
             <div class="modal_subject">
@@ -481,6 +524,17 @@
                         <li class="item item_start">2023.03.036</li>
                         <li class="item item_reload">2023.03.036</li>
                     </ul>
+                      <div class="detail-txt">
+                    <div class="detail-txt_ttl">アクション実行方法</div>
+<p>ライブ会場内やオンライン生配信内で提示される二次元バーコードを読み取る二次元バーコードを読み取る</p>
+                        
+                         <a class="action-btn" href="#">  
+                    <!--開く-->
+                    <img src="./image/icons/icon-under.svg" class="arrow-open">
+                    <!--閉じる-->
+                    <img src="./image/icons/icon-under.svg" class="arrow-close" style="display:none;">
+                </a>
+                    </div>
 
                     <div class="modal_matic">
                         <span class="matic_num">3,500</span>
@@ -489,13 +543,11 @@
                     </div>
                 </div>
             </div>
-            <a class="modal_action" href="#">
-               QRコードを読み込む       
-            </a>
-            <div class="live-block__container-block">
-                
+            <div class="live-block_ttl">ライブ一覧</div>
+            <div class="live-block-mypage">
+              
                 <!--1-->
-                <div class="live-block__container">
+                <div class="live-block">
                 <div class="block_thumb">
                     <div class="badge-area">
                                     <div class="project-box">
@@ -518,6 +570,7 @@
                         <li class="item item_start">2023.03.036</li>
                         <li class="item item_reload">2023.03.036</li>
                     </ul>
+                    
 
                     <div class="modal-live_matic">
                         <span class="matic_num">3,500</span>
@@ -528,7 +581,7 @@
             </div>
                 
                 <!--2-->
-                <div class="live-block__container">
+                <div class="live-block">
                 <div class="block_thumb">
                     <div class="badge-area">
                                     <div class="project-box">
@@ -560,7 +613,7 @@
             </div>
                 
                  <!--3-->
-                <div class="live-block__container">
+                <div class="live-block">
                 <div class="block_thumb">
                     <div class="badge-area">
                                     <div class="project-box">
@@ -593,7 +646,7 @@
             </div>
                 
                 <!--4-->
-                <div class="live-block__container">
+                <div class="live-block">
                 <div class="block_thumb">
                     <div class="badge-area">
                                     <div class="project-box">
@@ -629,7 +682,7 @@
             </div>
         </div>
     </div>
-     <!--ポップアップ Twitter RT-->
+     <!--ポップアップ Twitter RT
     <div class="modal-box modal-box_basic" style="display:none;">
         <a class="close-btn" href="#"></a>
         <div class="modal_inner">
@@ -674,23 +727,7 @@
                     </div>
                 </div>
             </div>
-           
 
-
-            <div class="modal_action">
-                指定のツイートを引用リツイートする
-                <a class="action-btn" href="#">  
-                    <!--開く-->
-                    <img src="./image/icons/icon-under.svg" class="arrow-open">
-                    <!--閉じる-->
-                    <img src="./image/icons/icon-under.svg" class="arrow-close" style="display:none;">
-                </a>
-                <!--仮ボタン開閉スペース-->
-                <div class="open-block" style="display:none;">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-                </div>
-                <!--//仮ボタン開閉スペース-->
-            </div>
 
             <dl class="tweet-block">
                 <dt>Your Latest Contribution:</dt>
@@ -707,6 +744,7 @@
 
         </div>
     </div>
+    -->
 
     
 </body>

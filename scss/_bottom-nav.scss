@@ -1,0 +1,56 @@
+@use "config/variables" as v;
+@use "mixin" as m;
+
+.bottom-nav {
+  @include m.pc-tablet-size{
+       display: none;
+    }
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    height: 50px;
+    background: #000;
+    bottom:0;
+    
+    .item_wrap{
+        display: flex;
+        align-items: center;
+         height: 100%;
+        .item{
+            width:50%;
+            .icon-block,
+            a.icon-block{
+                text-align: center;
+                text-decoration: none;
+                color: v.$base-white-color;
+            }
+            .icon{
+                width:28px;
+                display: inline-block;
+                padding: 2px;
+                
+                
+                &.img-circle {
+                    border-radius: 50%;
+                    width:30px;
+                    height: 30px;
+                     padding: 0;
+                    &.active{
+                        border: 1.5px solid v.$primary-color;
+                    }
+                }
+            }
+            .icon_txt{
+               font-weight: 700;
+                font-size: 10px;
+                line-height: 14px;
+
+                  &.active{
+                       color:v.$primary-color;
+                    }
+                
+            }
+        }
+    }
+    
+}

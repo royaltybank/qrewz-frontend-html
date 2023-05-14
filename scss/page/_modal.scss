@@ -44,21 +44,17 @@
 
     
     &.modal-box_edit {
-        width: 847px;
+        width: 746px;
         z-index: 1002;
         background: rgba(0, 0, 0, 0.85);
         border: 1px solid rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(10px);
         border-radius: 20px;
+        min-height: 715px;
         
-       @include m.tablet-size {
-            width: 90%;
-            inset: inherit;
-            top: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
+       @include m.sp-size {
+           width: 343px;
+           min-height: 597px;
         }
     }
     
@@ -75,14 +71,16 @@
     }
 
     .modal_inner {
-        padding: 44px;
+        padding: 30px;
         color: #fff;
         text-align: left;
 
         @include m.sp-size {
-            padding: 28px;
+            padding: 20px;
         }
     }
+    
+
     
     
     ///scroll///
@@ -169,15 +167,19 @@
     }
     
      ///form//
+    .form_container:first-of-type{
+            margin-top: 0;
+        }
+    
     .form_container{
         display: flex;
+        align-items: center;
+         margin-top: 16px;
+ 
         @include m.sp-size {
             flex-direction: column;
         }
-        
-        &.second{
-            margin-top: 16px;
-        }
+ 
         .item_label{
              width:140px;
             padding-right: 20px;
@@ -190,7 +192,6 @@
             
             label{
                 display: inline-block;
-                padding: 5px 0;
                 font-size: 14px;
                  @include m.sp-size {
                     font-size: 13px;
@@ -199,7 +200,7 @@
             }
         }
         .item_txt{
-             width: calc( 100% - 140px);
+             flex: 1;
             position: relative;
              @include m.sp-size {
                 width:100%;
@@ -215,7 +216,7 @@
         
         
     .form-text {
-        font-size: 14px;
+        @include m.txt-sm;
         height: 32px;
         width: 100%;
         padding: 5px 10px;
@@ -238,11 +239,19 @@
      textarea.form-text {
            height: 88px;
             display: block;
+         @include m.sp-size {
+             height: 77px;
+         }
           
         }
     }
 
 }
+
+//parts///
+img.square-img{
+                border-radius: 15px;
+            }
 
 
 
@@ -295,45 +304,32 @@
         z-index: 3;
         position: absolute;
         bottom: 0;
-        left: 30px;
+        left: 26px;
         width: 100px;
         text-align: center;
 
-        @include m.tablet-size {
-/*            bottom: -29px;*/
+        @include m.sp-size {
             left: 17px;
             width: 72px;
         }
 
         .img-circle {
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: 88px;
+            height: 88px;
             border: 4px solid #181818;
-            vertical-align: top;
 
-            @include m.tablet-size {
+            @include m.sp-size {
                 width: 72px;
                 height: 72px;
                 border-width: 2px;
             }
             
               .upload-btn{
-            z-index: 2;
-        }
-
-            > img {
-                display: block;
-                position: absolute;
-                top: 50%;
-                width: 100%;
-                height: 100%;
-                transform: translateY(-50%);
-                object-fit: contain;
+                z-index: 2;
             }
+
+          
         }
     }
 
@@ -351,9 +347,11 @@
         font-size: 32px;
         line-height: 1.3em;
         font-weight: v.$font-weight-bold;
+        &.subject_sm{
+            @include m.txt-x2lg;
+        }
         @include m.sp-size {
              font-size: 25px;
-             
         }
         
       
@@ -393,14 +391,17 @@
                 width: 88px;
             }
         }
+        
+        .block_square-thumb{
+           width:150px;
+        }
 
         .block_txt {
             margin-left: 15px;
-            width: calc(100% - 120px);
+           flex: 1;
 
             @include m.sp-size {
                 margin-left: 10px;
-                width: calc(100% - 88px);
             }
         }
     }
@@ -421,7 +422,7 @@
 
     .modal_matic {
         text-align: right;
-        margin-top: 40px;
+        //margin-top: 40px;
 
         .matic_num {
             font-weight: v.$font-weight-regular;
@@ -455,27 +456,6 @@
 
     }
 
-    .modal_action {
-        margin-top: 16px;
-        display: block;
-        width: 100%;
-        padding: 32px 16px;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        font-size: 20px;
-        line-height: 41px;
-        font-weight: v.$font-weight-bold;
-        text-align: center;
-        color: v.$base-white-color;
-        text-decoration: none;
-        position: relative;
-
-        @include m.sp-size {
-            padding: 18px;
-            font-size: 13px;
-            line-height: 18px;
-        }
-    }
 
     ///開閉////
     .open-block {
@@ -487,41 +467,26 @@
     
     /////modal action/////
 
-.action-token_thumb {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    
-    width: 115px;
-    height: 115px;
-    vertical-align: top;
-    
-    &.thumb_sm{
-        width: 92px;
-        height:92px;
-         @include m.tablet-size {
-            width: 68px;
-            height:68px;
-             border-radius: 16px;
-        }
-    }
-
-    @include m.tablet-size {
-        width: 70px;
-        height:70px;
-        border-radius: 16px;
-    }
-
-    > img {
-        border-radius: 20px;
-    }
-}
     
     
     .detail-txt{
         position: relative;
-        @include m.txt-sm;
         padding: 12px 0 18px;
+        
+        .detail-txt_ttl{
+            font-weight: v.$font-weight-bold;
+            @include m.txt-md;
+        }
+        p{
+            @include m.txt-sm ;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .action-btn{
+            bottom:2px;
+        }
     }
     
 //twitter 説明//
@@ -576,11 +541,19 @@
   
     
     //////LIVE/////////////
+  
+  
+    .live-block_ttl {
+         font-weight: v.$font-weight-bold;
+        @include m.txt-md;
         
-    .live-block__container {
+    }
+    .live-block {
         display: flex;
         align-items: center;
-        margin-top: 26px;
+        margin-top: 16px;
+         
+      
 
         .block_thumb {
             width: 92px;
@@ -592,11 +565,10 @@
 
         .block_txt {
             margin-left:40px;
-            width: calc(100% - 92px);
+              flex: 1;
 
             @include m.sp-size {
                 margin-left: 10px;
-                width: calc(100% - 68px);
             }
         }
         
@@ -660,6 +632,79 @@
         }
     }
     }
+    
+    .live-block-mypage{
+        .live-block:first-of-type{
+            margin-top: 0;
+        }
+    }
+    
+    .live-block-detailpage{
+        .live-block:first-of-type{
+            margin-top: 5px;
+        }
+    }
+}
+
+
+//////toggle-button/////////////
+.toggle-block{
+    display: flex;
+    margin-bottom: 10px;
+}
+.toggle-block_name{
+    @include m.txt-md;
+    width:110px;
+}
+.toggle-block_question{
+        width:26px;
+    img{
+         width: 20px;
+    }
+   
+}
+
+.toggle-block_txt{
+    flex: 1;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+
+.setting-toggle-button {
+    display: inline-block;
+    position: relative;
+    width: 42px;//
+    height: 21px;//
+    border-radius: 21px;//
+    background-color: #dddddd;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+.setting-toggle-button:has(:checked) {
+    background-color: #7a45e5;
+}
+
+.setting-toggle-button:after {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 15px;//
+    height: 15px;//
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    content: '';
+    transition: left .4s;
+}
+
+.setting-toggle-button:has(:checked)::after {
+    left: 21px;//
+}
+
+.setting-toggle-button input {
+    display: none;
 }
 
 
