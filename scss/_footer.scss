@@ -21,7 +21,7 @@ footer{
             flex-direction: column;
             justify-content: inherit;
             align-items:stretch;
-            
+             height: inherit;
         }
     }
     
@@ -69,7 +69,7 @@ footer{
             @include m.sp-size {
                 padding:8px;
                @include m.txt-sm; 
-                    margin: 10px auto;
+                    margin: 0 auto;
             }
             
             a{

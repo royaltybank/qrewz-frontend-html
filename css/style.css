@@ -986,6 +986,7 @@ footer .footer__inner {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    height: inherit;
   }
 }
 footer .footer-logo__block {
@@ -1035,7 +1036,7 @@ footer .footer__menu li {
     padding: 8px;
     font-size: 13px;
     line-height: 1.5em;
-    margin: 10px auto;
+    margin: 0 auto;
   }
 }
 footer .footer__menu li a {
