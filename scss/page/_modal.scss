@@ -226,12 +226,14 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         background-color: transparent;
-        color: rgba(255, 255, 255, 0.3);
+        color: v.$base-white-color;
         @include m.sp-size {
                font-size: 12px;
             }
         
     }
+        
+        
 
     .form-text:focus {
         outline: 0;

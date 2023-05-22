@@ -1098,6 +1098,408 @@ footer .footer__menu li a {
   color: #7A45E5;
 }
 
+/*TOP-PAGE
+---------------------------------------------------------------------------*/
+section.top-cover-section .contents-container {
+  border-radius: 30px 30px 0 0;
+}
+
+.top-cover_area {
+  position: relative;
+}
+.top-cover_area .top-cover_img {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+.top-cover_area .slide-ttl_container {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  text-align: left;
+}
+.top-cover_area .slide-ttl {
+  opacity: 0;
+  /* ここを追加 */
+  color: #000000;
+  font-size: 40px;
+  line-height: 1.5em;
+  font-weight: 700;
+  -webkit-animation: SlideIn 1s;
+          animation: SlideIn 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  /* アニメーションの繰り返し（無限）*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  /*これで値を保持*/
+}
+.top-cover_area .slide-ttl.ttl01 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.top-cover_area .slide-ttl.ttl02 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+@-webkit-keyframes SlideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(64px);
+            transform: translateY(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes SlideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(64px);
+            transform: translateY(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.button_container {
+  position: absolute;
+  bottom: 108px;
+  left: 40px;
+  text-align: left;
+}
+
+.button_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 27px;
+}
+
+.notes {
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.button-deult {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 26px;
+  text-decoration: none;
+  height: 56px;
+  width: 210px;
+  position: relative;
+  /*ボタン内側の設定*/
+}
+.button-deult span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px 55px;
+  white-space: nowrap;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  text-align: center;
+  /* 重なりを3Dで表示 */
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  /* アニメーションの設定 数字が少なくなるほど早く回転 */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/*== くるっと回転（奥に） */
+/* 回転前 */
+.rotateback span:nth-child(1) {
+  background: #7A45E5;
+  color: #fff;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  /*はじめは回転なし*/
+  -webkit-transform-origin: 0 50% -30px;
+          transform-origin: 0 50% -30px;
+  /* 回転する起点 */
+}
+
+/*hoverをした後の形状*/
+.rotateback:hover span:nth-child(1) {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  /* X軸に90度回転 */
+}
+
+/* 回転後 */
+.rotateback span:nth-child(2) {
+  background: #000;
+  color: #fff;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  /*はじめはX軸に-90度回転*/
+  -webkit-transform-origin: 0 50% -30px;
+          transform-origin: 0 50% -30px;
+  /* 回転する起点 */
+}
+
+/*hoverをした後の形状*/
+.rotateback:hover span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  /* X軸に0度回転 */
+}
+
+section.top-contents-section .contents-container {
+  border-radius: 0;
+}
+section.top-contents-section .contents-container__inner {
+  padding: 40px 70px;
+}
+section.top-contents-section .contents-container__inner.no-horizontal-padding {
+  padding: 40px 0px;
+}
+section.top-contents-section .section-ttl {
+  font-size: 38px;
+  line-height: 1.3em;
+  font-weight: 700;
+}
+section.top-contents-section .section-sub-ttl {
+  font-size: 32px;
+  line-height: 1.3em;
+  font-weight: 700;
+}
+section.top-contents-section .item_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section.top-contents-section .item_container .section-ttl {
+  margin-bottom: 20px;
+}
+section.top-contents-section .item_container .item.item_txt {
+  text-align: left;
+}
+
+.roadmap_container {
+  position: relative;
+  border-left: #fff 1px solid;
+  width: 360px;
+  height: 400px;
+  margin-top: 50px;
+}
+.roadmap_container ul.roadmap {
+  position: absolute;
+  left: -7px;
+}
+.roadmap_container ul.roadmap li {
+  font-size: 15px;
+  line-height: 3em;
+}
+.roadmap_container ul.roadmap li:before {
+  content: ""; /* 空の要素作成 */
+  width: 13px; /* 幅指定 */
+  height: 13px; /* 高さ指定 */
+  display: inline-block; /* インラインブロックにする */
+  background-color: #D8D8D8;
+  border: 1px solid #fff;
+  position: relative; /* 位置調整 */
+  top: 3px; /* 位置指定 */
+  border-radius: 50%; /* 要素を丸くする */
+  margin-right: 50px;
+}
+.roadmap_container ul.roadmap li.now:before {
+  background-color: #FF9900;
+}
+.roadmap_container ul.roadmap li.year {
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: 35px;
+  line-height: 1.2em;
+}
+.roadmap_container ul.roadmap li.year:before {
+  content: inherit;
+}
+
+section.top-contents-section.top-contents-section_01 .item_container {
+  margin-top: 62px;
+}
+section.top-contents-section.top-contents-section_01 .item_container .item.item_txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section.top-contents-section.top-contents-section_01 .item_container .item.item_txt .item_inner {
+  padding: 0 80px;
+}
+section.top-contents-section.top-contents-section_01 .item_container .item.item_img {
+  width: 62.5%;
+  margin-top: 20px;
+}
+section.top-contents-section.top-contents-section_02 .item_container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.top-contents-section.top-contents-section_02 .item_container .item.item_txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section.top-contents-section.top-contents-section_02 .item_container .item.item_txt .item_inner {
+  padding: 0 0 0 98px;
+}
+section.top-contents-section.top-contents-section_02 .item_container .item.item_img {
+  width: 0.4736842105;
+}
+section.top-contents-section.top-contents-section_03 .item_container {
+  background: rgba(122, 69, 229, 0.8);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.top-contents-section.top-contents-section_03 .item_container .item.item_txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section.top-contents-section.top-contents-section_03 .item_container .item.item_txt .item_inner {
+  padding: 0 130px;
+}
+section.top-contents-section.top-contents-section_03 .item_container .item.item_img {
+  width: 46.875%;
+}
+section.top-contents-section.top-contents-section_04 .item_container {
+  margin-top: 62px;
+}
+section.top-contents-section.top-contents-section_04 .item_container .item.item_txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section.top-contents-section.top-contents-section_04 .item_container .item.item_txt .item_inner {
+  padding: 0 148px 0 0;
+}
+section.top-contents-section.top-contents-section_04 .item_container .item.item_img {
+  width: 0.5087719298;
+}
+section.top-contents-section.top-contents-section_05 .item_container {
+  margin-top: 62px;
+  background: rgba(122, 69, 229, 0.8);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.top-contents-section.top-contents-section_05 .item_container .item.item_txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section.top-contents-section.top-contents-section_05 .item_container .item.item_txt .item_inner {
+  padding: 0 0 0 129px;
+}
+section.top-contents-section.top-contents-section_05 .item_container .item.item_img {
+  width: 0.4175438596;
+}
+
+/*========= 流れるテキスト ===============*/
+/*全共通*/
+.slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+}
+
+/* 上下のアニメーション*/
+.downAnime {
+  opacity: 0;
+  /* 事前に透過0 にして消しておく*/
+}
+
+.slideAnimeDownUp {
+  -webkit-animation-name: slideTextY100;
+          animation-name: slideTextY100;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes slideTextY100 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    /* 要素を上の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+@keyframes slideTextY100 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    /* 要素を上の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+.slideAnimeUpDown {
+  -webkit-animation-name: slideTextY-100;
+          animation-name: slideTextY-100;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes slideTextY-100 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    /* 要素を下の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+@keyframes slideTextY-100 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    /* 要素を下の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
 /* MY PAGE
 ---------------------------------------------------------------------------*/
 section.mypage-header-section .status-container,
@@ -2163,7 +2565,7 @@ section.section_works .credit_container {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
 @media screen and (max-width: 600px) {
   .modal-box .form_container .form-text {
