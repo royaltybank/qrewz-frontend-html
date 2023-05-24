@@ -1438,7 +1438,7 @@ section.top-contents-section.top-contents-section_01 .item_container .item.item_
 }
 section.top-contents-section.top-contents-section_01 .item_container .item.item_img .bg-img {
   padding-top: 53.5%;
-  background: url(/image/top/top-contents-01_img.png);
+  background: url(../image/top/top-contents-01_img.png);
   background-size: cover;
 }
 section.top-contents-section.top-contents-section_02 .item_container {
@@ -1478,7 +1478,7 @@ section.top-contents-section.top-contents-section_02 .item_container .item.item_
 }
 section.top-contents-section.top-contents-section_02 .item_container .item.item_img .bg-img {
   padding-top: 108.703704%;
-  background: url(/image/top/top-contents-02_img.png);
+  background: url(../image/top/top-contents-02_img.png);
   background-size: cover;
 }
 @media screen and (max-width: 900px) {
@@ -1524,7 +1524,7 @@ section.top-contents-section.top-contents-section_03 .item_container .item.item_
 }
 section.top-contents-section.top-contents-section_03 .item_container .item.item_img .bg-img {
   padding-top: 83.33%;
-  background: url(/image/top/top-contents-03_img.png);
+  background: url(../image/top/top-contents-03_img.png);
   background-size: cover;
 }
 section.top-contents-section.top-contents-section_04 .item_container {
@@ -1563,7 +1563,7 @@ section.top-contents-section.top-contents-section_04 .item_container .item.item_
 }
 section.top-contents-section.top-contents-section_04 .item_container .item.item_img .bg-img {
   padding-top: 53.448%;
-  background: url(/image/top/top-contents-04_img.png);
+  background: url(../image/top/top-contents-04_img.png);
   background-size: cover;
 }
 @media screen and (max-width: 900px) {
@@ -1616,7 +1616,7 @@ section.top-contents-section.top-contents-section_05 .item_container .item.item_
 }
 section.top-contents-section.top-contents-section_05 .item_container .item.item_img .bg-img {
   padding-top: 123.3%;
-  background: url(/image/top/top-contents-05_img.png);
+  background: url(../image/top/top-contents-05_img.png);
   background-size: cover;
 }
 
