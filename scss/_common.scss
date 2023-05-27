@@ -24,12 +24,12 @@ h6 {
 
 h2 {
     font-size: 60px;
-    line-height: 70px;
+    line-height: 1.2em;
     color: v.$primary-color;
 
     @include m.tablet-size {
-        font-size: 50px;
-        line-height: 59px;
+        font-size: 40px;
+        
     }
 }
 

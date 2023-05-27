@@ -218,6 +218,7 @@ body {
   position: absolute;
   top: 46px;
   left: 0;
+  text-align: left;
 }
 
 .contents-container__inner {
@@ -300,13 +301,12 @@ h6 {
 
 h2 {
   font-size: 60px;
-  line-height: 70px;
+  line-height: 1.2em;
   color: #7A45E5;
 }
 @media screen and (max-width: 900px) {
   h2 {
-    font-size: 50px;
-    line-height: 59px;
+    font-size: 40px;
   }
 }
 
@@ -2378,6 +2378,90 @@ a.url-link {
   .detail-cover_sns .donate-container {
     margin-left: 0;
     margin-top: 22px;
+  }
+}
+
+.target-status_container .target-status_wrap {
+  width: 440px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .target-status_container .target-status_wrap {
+    width: 100%;
+  }
+}
+.target-status_container .target-status_wrap.second {
+  margin-top: 58px;
+}
+.target-status_container .target-status_ttl {
+  font-size: 19px;
+  font-weight: 700;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .target-status_container .target-status_ttl {
+    font-size: 15px;
+  }
+}
+.target-status_container .target-status_ttl span {
+  margin-left: 30px;
+  font-size: 13px;
+  font-weight: 400;
+}
+@media screen and (max-width: 600px) {
+  .target-status_container .target-status_ttl span {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+}
+.target-status_container .target-status {
+  background: rgba(122, 69, 229, 0.6);
+  width: 100%;
+  padding: 32px 10px 40px;
+  margin-top: 24px;
+}
+@media screen and (max-width: 600px) {
+  .target-status_container .target-status {
+    padding: 22px 10px;
+    margin-top: 18px;
+  }
+}
+.target-status_container .item_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.target-status_container .item_container dl.item_column dt {
+  font-size: 14px;
+  line-height: 1em;
+}
+@media screen and (max-width: 600px) {
+  .target-status_container .item_container dl.item_column dt {
+    font-size: 11px;
+  }
+}
+.target-status_container .item_container dl.item_column dd {
+  margin-top: 10px;
+}
+.target-status_container .item_container .item_num {
+  font-size: 30px;
+  font-weight: 700;
+}
+@media screen and (max-width: 600px) {
+  .target-status_container .item_container .item_num {
+    font-size: 22px;
+  }
+}
+.target-status_container .item_container .item_sm {
+  font-size: 21px;
+}
+@media screen and (max-width: 600px) {
+  .target-status_container .item_container .item_sm {
+    font-size: 15px;
   }
 }
 
