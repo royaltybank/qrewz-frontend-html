@@ -1935,16 +1935,25 @@ section.mybadge-section .contents-container {
 
 .cover-area {
   position: relative;
-}
-.cover-area .cover-img {
   width: 100%;
   border-radius: 30px 30px 0 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+.cover-area:before {
+  content: "";
+  display: block;
+  padding-top: 34%;
 }
 .cover-area .shade {
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.6)));
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.6) 100%);
 }
@@ -3082,24 +3091,32 @@ img.square-img {
 
 .modal-box_edit .main-img_area {
   margin: 48px auto 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+.modal-box_edit .main-img_area:before {
+  content: "";
+  display: block;
+  padding-top: 34%;
 }
 @media screen and (max-width: 600px) {
   .modal-box_edit .main-img_area {
     margin-top: 0;
-  }
-}
-.modal-box_edit .main-img {
-  position: relative;
-  width: 100%;
-  height: 277px;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 600px) {
-  .modal-box_edit .main-img {
-    height: 152px;
     border-radius: 20px 20px 0 0;
-    overflow: hidden;
   }
+}
+.modal-box_edit .shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(86%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 86%, rgba(0, 0, 0, 0.6) 100%);
 }
 .modal-box_edit .upload-btn {
   position: absolute;
@@ -3132,13 +3149,15 @@ img.square-img {
   position: absolute;
   bottom: 0;
   left: 26px;
-  width: 100px;
+  bottom: -44px;
+  width: 88px;
   text-align: center;
 }
 @media screen and (max-width: 600px) {
   .modal-box_edit .profile_thumbnail {
     left: 17px;
     width: 72px;
+    bottom: -36px;
   }
 }
 .modal-box_edit .profile_thumbnail .img-circle {
@@ -3156,6 +3175,9 @@ img.square-img {
 }
 .modal-box_edit .profile_thumbnail .img-circle .upload-btn {
   z-index: 2;
+}
+.modal-box_edit .modal_inner {
+  margin-top: 30px;
 }
 
 .modal-box_basic .modal_subject {
