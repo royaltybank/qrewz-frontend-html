@@ -1154,21 +1154,22 @@ section.top-cover-section .contents-container {
     display: block !important;
   }
 }
-.top-cover_area .slide-ttl_container {
+
+.slide-ttl_container {
   position: absolute;
   top: 200px;
   left: 40px;
   text-align: left;
 }
 @media screen and (max-width: 900px) {
-  .top-cover_area .slide-ttl_container {
+  .slide-ttl_container {
     top: 36px;
     left: 20px;
   }
 }
-.top-cover_area .slide-ttl {
+
+.slide-ttl {
   opacity: 0;
-  /* ここを追加 */
   color: #000000;
   font-size: 40px;
   line-height: 1.5em;
@@ -1183,18 +1184,29 @@ section.top-cover-section .contents-container {
   /*これで値を保持*/
 }
 @media screen and (max-width: 600px) {
-  .top-cover_area .slide-ttl {
+  .slide-ttl {
     font-size: 23px;
     line-height: 1.1em;
   }
 }
-.top-cover_area .slide-ttl.ttl01 {
+.slide-ttl.ttl01 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.top-cover_area .slide-ttl.ttl02 {
+.slide-ttl.ttl02 {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
+}
+
+.section-ttl {
+  opacity: 0;
+  -webkit-animation: SlideIn 1s;
+          animation: SlideIn 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  /* アニメーションの繰り返し（無限）*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes SlideIn {
@@ -1780,6 +1792,118 @@ section.bottom-btn-section .contents-container .button_wrap {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+.scroll_base {
+  height: 691px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.scroll_base:before {
+  /*headerの疑似要素に背景画像を指定*/
+  content: "";
+  position: fixed;
+  top: 110px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 90;
+  width: 100%;
+  height: 691px;
+  background-image: url(/image/top/pc_top-visual.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 1280px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 30px 30px 0 0;
+}
+
+.top-base-cover_area .slide-ttl_container,
+.top-base-cover_area .button_container {
+  z-index: 91;
+  position: fixed;
+  left: 200px;
+}
+.top-base-cover_area .slide-ttl_container {
+  top: 300px;
+}
+.top-base-cover_area .button_container {
+  bottom: 260px;
+}
+
+.scroll_cover {
+  /*下のかぶさるエリアの指定*/
+  position: relative;
+  z-index: 92;
+}
+.scroll_cover .contents-container {
+  background: #000;
+}
+
+/*========= 流れるテキスト ===============*/
+/*全共通*/
+.slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+}
+
+/* 上下のアニメーション*/
+.downAnime {
+  opacity: 0; /* 事前に透過0 にして消しておく*/
+}
+
+.slideAnimeDownUp {
+  -webkit-animation-name: slideTextY100;
+          animation-name: slideTextY100;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY100 {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); /* 要素を上の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+.slideAnimeUpDown {
+  -webkit-animation-name: slideTextY-100;
+          animation-name: slideTextY-100;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); /* 要素を下の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); /* 要素を元の位置に移動*/
     opacity: 1;
   }
 }

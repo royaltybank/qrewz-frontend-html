@@ -5,6 +5,7 @@
 ---------------------------------------------------------------------------*/
 
 
+
 ////common  section inner///
 section.top-contents-section,
 section.bottom-btn-section {
@@ -70,6 +71,10 @@ section.top-cover-section {
             }
         }
     }
+    
+    }
+
+////slide-ttl///
 
     .slide-ttl_container {
         position: absolute;
@@ -86,7 +91,6 @@ section.top-cover-section {
 
     .slide-ttl {
         opacity: 0;
-        /* ここを追加 */
         color: v.$base-black-color;
         font-size: 40px;
         line-height: 1.5em;
@@ -110,7 +114,15 @@ section.top-cover-section {
             animation-delay: 1.2s;
         }
     }
+
+.section-ttl{
+     opacity: 0;
+    animation: SlideIn 1.0s;
+        animation-iteration-count: 1;
+        /* アニメーションの繰り返し（無限）*/
+        animation-fill-mode: forwards;
 }
+
 
 ////slide-ttl アニメ///
 

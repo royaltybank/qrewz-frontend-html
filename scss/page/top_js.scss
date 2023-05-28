@@ -1,0 +1,112 @@
+
+.scroll_base{
+     height: 691px;//691px
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    
+}
+
+.scroll_base:before{
+	/*headerの疑似要素に背景画像を指定*/
+	content:"";
+	position:fixed;
+	top:110px;
+	left:0;
+    right:0;
+    margin:auto;
+	z-index:90;
+	width:100%;
+	 height: 691px;//691px
+    background-image: url(/image/top/pc_top-visual.png);
+    background-position: top;
+    background-repeat:no-repeat;
+	background-size:contain;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 1280px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 30px 30px 0 0;
+}
+.top-base-cover_area{
+    .slide-ttl_container,
+    .button_container{
+        z-index: 91;
+        position:fixed;
+        left:200px;
+    }
+    .slide-ttl_container{
+        top:300px;
+    }
+    .button_container{
+        bottom:260px;
+    }
+}
+
+.scroll_cover{
+    	/*下のかぶさるエリアの指定*/
+	position: relative;
+	z-index:92;
+    
+    .contents-container{
+        background: #000;
+    }
+
+}
+
+
+/*========= 流れるテキスト ===============*/
+
+/*全共通*/
+
+.slide-in {
+  overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+
+}
+
+/* 上下のアニメーション*/
+.downAnime{
+    opacity: 0;/* 事前に透過0 にして消しておく*/
+}
+
+.slideAnimeDownUp {
+    animation-name:slideTextY100;
+    animation-duration:1.2s;//0.8s
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY100 {
+    from {
+        transform: translateY(100%);/* 要素を上の枠外に移動*/
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);/* 要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
+
+.slideAnimeUpDown {
+    animation-name:slideTextY-100;
+    animation-duration:1.2s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+    from {
+        transform: translateY(-100%);/* 要素を下の枠外に移動*/
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);/* 要素を元の位置に移動*/
+        opacity: 1;
+    }
+}
