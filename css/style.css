@@ -1813,7 +1813,7 @@ section.bottom-btn-section .contents-container .button_wrap {
   z-index: 90;
   width: 100%;
   height: 691px;
-  background-image: url(/image/top/pc_top-visual.png);
+  background-image: url(../image/top/pc_top-visual.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
