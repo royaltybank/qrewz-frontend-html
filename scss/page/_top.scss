@@ -32,13 +32,13 @@ section.bottom-btn-section {
 
 //SP表示調整//
 
-section.top-contents-section.top-contents-section_03{
-    .contents-container__inner.no-horizontal-padding{
+section.top-contents-section.top-contents-section_03 {
+    .contents-container__inner.no-horizontal-padding {
         @include m.tablet-size {
-               padding-top: 0;
-            }
+            padding-top: 0;
+        }
     }
-} 
+}
 
 
 /////top//////
@@ -71,56 +71,56 @@ section.top-cover-section {
             }
         }
     }
-    
-    }
+
+}
 
 ////slide-ttl///
 
-    .slide-ttl_container {
-        position: absolute;
-        top: 200px;
-        left: 40px;
-        text-align: left;
+.slide-ttl_container {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    text-align: left;
 
-        @include m.tablet-size {
-            top: 36px;
-            left: 20px;
+    @include m.tablet-size {
+        top: 36px;
+        left: 20px;
 
-        }
     }
+}
 
-    .slide-ttl {
-        opacity: 0;
-        color: v.$base-black-color;
-        font-size: 40px;
-        line-height: 1.5em;
-        font-weight: v.$font-weight-bold;
-        animation: SlideIn 1.0s;
-        animation-iteration-count: 1;
-        /* アニメーションの繰り返し（無限）*/
-        animation-fill-mode: forwards;
-
-        @include m.sp-size {
-            font-size: 23px;
-            line-height: 1.1em;
-        }
-
-        /*これで値を保持*/
-        &.ttl01 {
-            animation-delay: 0.4s;
-        }
-
-        &.ttl02 {
-            animation-delay: 1.2s;
-        }
-    }
-
-.section-ttl{
-     opacity: 0;
+.slide-ttl {
+    opacity: 0;
+    color: v.$base-black-color;
+    font-size: 40px;
+    line-height: 1.5em;
+    font-weight: v.$font-weight-bold;
     animation: SlideIn 1.0s;
-        animation-iteration-count: 1;
-        /* アニメーションの繰り返し（無限）*/
-        animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    /* アニメーションの繰り返し（無限）*/
+    animation-fill-mode: forwards;
+
+    @include m.sp-size {
+        font-size: 23px;
+        line-height: 1.1em;
+    }
+
+    /*これで値を保持*/
+    &.ttl01 {
+        animation-delay: 0.4s;
+    }
+
+    &.ttl02 {
+        animation-delay: 1.2s;
+    }
+}
+
+.section-ttl.slide-in {
+    opacity: 0;
+    animation: SlideIn 1.0s;
+    animation-iteration-count: 1;
+    /* アニメーションの繰り返し（無限）*/
+    animation-fill-mode: forwards;
 }
 
 
@@ -165,90 +165,81 @@ section.top-cover-section {
 .notes {
     padding-top: 15px;
     font-size: 14px;
-   line-height: 1.3em;
+    line-height: 1.3em;
 
     @include m.sp-size {
         font-size: 8px;
     }
 }
 
-//button-design//
-.button-deult {
-    display: inline-block;
-    font-size: 22px;
-    line-height: 1.2em;
-    text-decoration: none;
+
+
+////// ////////
+.btn-radius {
+    overflow: hidden;
     height: 56px; //
     width: 210px;
-    position: relative; //回転設定//
-
-    @include m.sp-size {
-        font-size: 13px;
-        height: 33px; //
-        width: 116px;
-    }
-
-    /*ボタン内側の設定*/
-    span {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        padding: 10px 55px;
-        white-space: nowrap;
-        border-radius: 30px;
-        border: 2px solid v.$base-white-color;
-        text-align: center;
-        //border: 1px solid #333;
-        /* 重なりを3Dで表示 */
-        transform-style: preserve-3d;
-        /* アニメーションの設定 数字が少なくなるほど早く回転 */
-        transition: 0.5s;
-
-        @include m.sp-size {
-            padding: 7px 0;
-            border-radius: 16.5px;
-        }
-    }
-}
-
-/*== くるっと回転（奥に） */
-
-/* 回転前 */
-.rotateback span:nth-child(1) {
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid v.$base-white-color;
     background: v.$primary-color;
     color: v.$base-white-color;
-    transform: rotateX(0deg);
-    /*はじめは回転なし*/
-    transform-origin: 0 50% -30px;
-
-    /* 回転する起点 */
-    @include m.sp-size {
-        transform-origin: 0 50% -10px;
+    text-decoration: none;
+     @include m.sp-size {
+        height: 33px; //
+        width: 116px;
+        padding: 0;
+         border-radius: 16.5px;
     }
+
+    &:hover {
+        background: #000;
+        transition: all 0.9s ease;
+        span {
+            transform: translateY(-40px);
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+    }
+    
+    span {
+        font-size: 22px;
+        line-height: 1.2em;
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        @include m.sp-size {
+            font-size: 13px;
+        }
+
+        &:after {
+            position: absolute;
+            top: 40px;
+            left: 0;
+        }
+
+        &#signup:after {
+            content: "新規登録";
+        }
+        &#login:after {
+            content: "ログイン";
+        }
+    }
+    
+     &.active{
+         background: #000;
+         span{
+              transform: translateY(0);
+         }
+        
+    }
+
+
 }
 
-/*hoverをした後の形状*/
-.rotateback:hover span:nth-child(1) {
-    transform: rotateX(90deg);
-    /* X軸に90度回転 */
-}
 
-/* 回転後 */
-.rotateback span:nth-child(2) {
-    background: #000;
-    color: #fff;
-    transform: rotateX(-90deg);
-    /*はじめはX軸に-90度回転*/
-    transform-origin: 0 50% -30px;
-    /* 回転する起点 */
-}
 
-/*hoverをした後の形状*/
-.rotateback:hover span:nth-child(2) {
-    transform: rotateX(0deg);
-    /* X軸に0度回転 */
-}
 
 
 
@@ -359,8 +350,8 @@ section.top-contents-section {
                     }
 
                     .bg-img {
-                        padding-top: 53.5%; // (画像の高さ428 / 画像の横幅800) × 100
-                        background: url(../image/top/top-contents-01_img.png); //背景画像を設定
+                        padding-top: 66.75%; // (画像の高さ534 / 画像の横幅800) × 100
+                        background: url(../image/top/image01.jpg) no-repeat; //背景画像を設定
                         background-size: cover;
                     }
 
@@ -402,8 +393,8 @@ section.top-contents-section {
                     }
 
                     .bg-img {
-                        padding-top: 108.703704%; // (画像の高さ587 / 画像の横幅540) × 100
-                        background: url(../image/top/top-contents-02_img.png); //背景画像を設定
+                        padding-top: 108.333%; // (画像の高さ585 / 画像の横幅540) × 100
+                        background: url(../image/top/image02.png) no-repeat; //背景画像を設定
                         background-size: cover;
                     }
                 }
@@ -420,6 +411,7 @@ section.top-contents-section {
                 padding: 30px 24px 0;
             }
         }
+
         .item_container {
             background: rgba(122, 69, 229, 0.8);
             align-items: center;
@@ -450,8 +442,8 @@ section.top-contents-section {
                     }
 
                     .bg-img {
-                        padding-top: 83.33%; // (画像の高さ500 / 画像の横幅600) × 100
-                        background: url(../image/top/top-contents-03_img.png); //背景画像を設定
+                        padding-top: 124.833%; // (画像の高さ749 / 画像の横幅600) × 100
+                        background: url(../image/top/image03.jpg) no-repeat; //背景画像を設定
                         background-size: cover;
                     }
 
@@ -465,6 +457,7 @@ section.top-contents-section {
     &.top-contents-section_04 {
         .item_container {
             margin-top: 62px;
+
             // align-items: center;
             @include m.tablet-size {
                 flex-direction: column;
@@ -477,9 +470,10 @@ section.top-contents-section {
 
                     .item_inner {
                         padding: 0 148px 0 0;
-                         @include m.tablet-size {
-                                padding: 0 ;
-                            }
+
+                        @include m.tablet-size {
+                            padding: 0;
+                        }
                     }
                 }
 
@@ -492,8 +486,8 @@ section.top-contents-section {
                     }
 
                     .bg-img {
-                        padding-top: 53.448%; // (画像の高さ310 / 画像の横幅580) × 100
-                        background: url(../image/top/top-contents-04_img.png); //背景画像を設定
+                        padding-top: 66.724%; // (画像の高さ387 / 画像の横幅580) × 100
+                        background: url(../image/top/image04.jpg) no-repeat; //背景画像を設定
                         background-size: cover;
                     }
                 }
@@ -504,27 +498,29 @@ section.top-contents-section {
     }
 
     &.top-contents-section_05 {
-            .section-ttl {
+        .section-ttl {
             @include m.tablet-size {
                 padding: 0 24px;
-                
+
             }
         }
-        
-            .section-sub-ttl {
-                @include m.tablet-size {
-               text-align: center;
-                    padding-top: 20px;
-                
+
+        .section-sub-ttl {
+            @include m.tablet-size {
+                text-align: center;
+                padding-top: 20px;
+
             }
-            }
+        }
+
         .item_container {
             margin-top: 62px;
             background: rgba(122, 69, 229, 0.8);
             align-items: center;
+
             @include m.tablet-size {
-                flex-direction:column;
-                 margin-top: 0;
+                flex-direction: column;
+                margin-top: 0;
             }
 
             .item {
@@ -533,9 +529,10 @@ section.top-contents-section {
 
                     .item_inner {
                         padding: 0 0 0 129px;
-                          @include m.tablet-size {
-                                padding: 0 ;
-                            }
+
+                        @include m.tablet-size {
+                            padding: 0;
+                        }
                     }
                 }
 
@@ -548,7 +545,7 @@ section.top-contents-section {
 
                     .bg-img {
                         padding-top: 123.3%; // (画像の高さ587 / 画像の横幅476) × 100
-                        background: url(../image/top/top-contents-05_img.png); //背景画像を設定
+                        background: url(../image/top/image05.jpg) no-repeat; //背景画像を設定
                         background-size: cover;
                     }
 
@@ -567,14 +564,16 @@ section.top-contents-section {
     width: 360px;
     height: 400px;
     margin-top: 50px;
-         @include m.tablet-size {
-            margin: 38px auto 20px;
-        
-       }
-        @include m.sp-size {
-            width: calc( 100% - 40px);
-             height: 380px; 
-       }
+
+    @include m.tablet-size {
+        margin: 38px auto 20px;
+
+    }
+
+    @include m.sp-size {
+        width: calc(100% - 40px);
+        height: 380px;
+    }
 
 
 
@@ -585,25 +584,33 @@ section.top-contents-section {
         li {
             font-size: 15px;
             line-height: 3em;
-              @include m.sp-size {
-                        font-size: 13px;
-                    }
+
+            @include m.sp-size {
+                font-size: 13px;
+            }
         }
 
         li:before {
-            content: "";/* 空の要素作成 */
-            width: 13px;/* 幅指定 */
-            height: 13px; /* 高さ指定 */
-            display: inline-block;/* インラインブロックにする */
+            content: "";
+            /* 空の要素作成 */
+            width: 13px;
+            /* 幅指定 */
+            height: 13px;
+            /* 高さ指定 */
+            display: inline-block;
+            /* インラインブロックにする */
             background-color: #D8D8D8;
             border: 1px solid v.$base-white-color;
-            position: relative; /* 位置調整 */
-            top: 3px;/* 位置指定 */
+            position: relative;
+            /* 位置調整 */
+            top: 3px;
+            /* 位置指定 */
             border-radius: 50%;
             margin-right: 50px;
-             @include m.sp-size {
-                 margin-right: 10px;
-                    }
+
+            @include m.sp-size {
+                margin-right: 10px;
+            }
         }
 
         li.now:before {
