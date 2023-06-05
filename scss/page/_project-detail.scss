@@ -113,6 +113,7 @@
     @include m.txt-md;
     position: relative;
     padding-bottom: 20px;
+    white-space: pre-wrap;
 
     @include m.sp-size {
         @include m.txt-sm;
